@@ -9,8 +9,8 @@ FoamFile
     object      dynamicMeshDict;
 }
 
-ampli (0 0 30);
-omeg 6.2832;
+ampli (0 0 30); //Amplitud de la oscilacion en grados.
+omeg 6.2832;	//Frecuencia angular de oscilacion en rad/s.
 
 dynamicFvMesh dynamicMotionSolverFvMesh;
 
@@ -18,7 +18,7 @@ solvers
 (
 	Forzado
 	{
-		solver interpolatingSolidBody;
+		solver interpolatingSolidBody; //Solver con interpolacion SLERP (spherical linear interpolation).
 		
 		patches
 		(
