@@ -1,0 +1,12 @@
+//Diccionario de propiedades de turbulencia para el caso v1 de ala batiente.
+FoamFile
+{
+    version 2.0;
+    format ascii;
+    class dictionary;
+    location constant;
+    object turbulenceProperties;
+}
+
+
+simulationType laminar; //Régimen laminar

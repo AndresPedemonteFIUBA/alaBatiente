@@ -1,0 +1,57 @@
+//dynamicMeshDict para el caso v1 de ala batiente.
+
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      dynamicMeshDict;
+}
+
+ampli (0 0 30);
+omeg 6.2832;
+
+dynamicFvMesh dynamicMotionSolverFvMesh;
+
+solvers
+(
+	Forzado
+	{
+		solver interpolatingSolidBody;
+		
+		patches
+		(
+			varilla
+			ala
+		);
+		
+		CofG (0 0 0.0005);
+		
+		innerDistance 0.0015;
+		
+		outerDistance 0.065;
+		
+		solidBodyMotionFunction oscillatingRotatingMotion;
+
+		oscillatingRotatingMotionCoeffs
+		{
+		  origin (0 0 0.0005);
+		  axis (0 0 1);
+		  omega $omeg;
+		  amplitude $ampli;
+		}
+	}
+
+	Deformacion
+	{
+		solver  	displacementLaplacian;
+		
+		motionSolverLibs ("libfvMotionSolvers.so");
+
+		displacementLaplacianCoeffs
+		{
+		    diffusivity quadratic inverseDistance (ala); //Difusividad mucho mayor cerca de la superficie.
+		}
+	}
+);
