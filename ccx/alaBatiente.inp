@@ -12,6 +12,9 @@
 1623.,
 *Elastic
  4.5e9, 0.38
+**Arriba: modulo de elasticidad, coeficiente de Poisson
+**Conseguir valores acertados de lo anterior.
+**
 **
 **Asignamos el material al ala.
 **
