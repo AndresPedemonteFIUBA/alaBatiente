@@ -47,7 +47,7 @@
     <m2n:sockets from="Fluid" to="Solid" exchange-directory=".." />
 
     <coupling-scheme:parallel-implicit>
-      <time-window-size value="1e-3" />
+      <time-window-size value="1e-5" />
       <max-time value="10" />
       <participants first="Fluid" second="Solid" />
       <exchange data="Force" mesh="Solid-Mesh" from="Fluid" to="Solid" />
