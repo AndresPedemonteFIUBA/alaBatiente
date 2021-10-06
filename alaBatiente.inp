@@ -1,0 +1,52 @@
+**Importamos la malla, el conjunto de nodos fijos y el conjunto de nodos de la interface solido/fluido.
+*INCLUDE, INPUT=all.msh
+*INCLUDE, INPUT=nodosFijos.nam
+*INCLUDE, INPUT=interface.nam
+**
+** MATERIALES
+**
+** Se define el material del ala.
+**
+*Material, name=acetato
+*Density
+1623.,
+*Elastic
+ 4.5e9, 0.38
+**
+**Asignamos el material al ala.
+**
+*SOLID SECTION, Elset=Eall, material=acetato
+**
+** Definimos condiciones de análisis (dinámico, geometría no lineal, paso temporal, etc.).
+**
+*STEP, INC=1000000
+*DYNAMIC,DIRECT, NLGEOM
+ 1e-3, 50
+**
+** CONDICIONES DE BORDE
+**
+** Fijamos todos los nodos de la malla en la direccion z.
+**
+*BOUNDARY
+Nall, 3
+**
+**Fijamos los nodos donde el ala se vincula a la varilla.
+**
+*BOUNDARY
+NnodosFijos, 1, 1
+NnodosFijos, 2, 2
+NnodosFijos, 4, 4
+NnodosFijos, 5, 5
+NnodosFijos, 6, 6
+**
+** Aplicamos las fuerzas que nos manda OF.
+**
+*CLOAD
+ Nsurface, 1, 0.0
+ Nsurface, 2, 0.0
+ Nsurface, 3, 0.0
+*NODE FILE
+ U
+*EL FILE
+ S, E
+*END STEP
