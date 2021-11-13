@@ -28,7 +28,7 @@
       <write-data name="Force" mesh="Fluid-Mesh" />
       <read-data name="Displacement" mesh="Fluid-Mesh" />
       
-      <!--
+      
       <mapping:rbf-compact-tps-c2
       	solver-rtol="1e-09" 
       	support-radius="1e-6"
@@ -36,19 +36,22 @@
         from="Fluid-Mesh"
         to="Solid-Mesh"
         constraint="conservative" /> 
-        -->
+        
+      <!--  
       <mapping:nearest-neighbor
         direction="write"
         from="Fluid-Mesh"
         to="Solid-Mesh"
         constraint="conservative" />
+        -->
+      <!--
       <mapping:nearest-neighbor
         direction="read"
         from="Solid-Mesh"
         to="Fluid-Mesh"
         constraint="consistent" />
-        
-      <!--
+        -->
+      
       <mapping:rbf-compact-tps-c2
       	solver-rtol="1e-09" 
       	support-radius="1e-6"
@@ -56,7 +59,7 @@
         from="Solid-Mesh"
         to="Fluid-Mesh"
         constraint="consistent" />
-        -->
+        
         
     </participant>
 
