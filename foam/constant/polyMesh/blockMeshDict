@@ -31,13 +31,13 @@ x15 0.002121320344;
 y15 -0.002121320344;
 x18 0.002121320344;
 y18 0.002121320344;
-x22 0.06499895832;
+x22 0.03649979165;
 x16 0.002508782179;
 
-xentrada -0.075;
-altura2 0.09;
-maltura2 -0.09;
-xsalida 0.25;
+xentrada -0.025;
+altura2 0.045;
+maltura2 -0.045;
+xsalida 0.2;
 
 vertices
 (
@@ -73,38 +73,38 @@ vertices
 	($xsalida $y13 0) 							//Vertice 29
 	($xsalida $y18 0) 							//Vertice 30
 	($xsalida $altura2 0) 							//Vertice 31
-	($xentrada $maltura2 0.001) 			 			//Vertice 32			
-	($xentrada $y5 0.001) 							//Vertice 33 							
-	($xentrada $y6 0.001) 							//Vertice 34							
-	($xentrada $altura2 0.001) 						//Vertice 35 					
-	($x5 $maltura2 0.001) 							//Vertice 36 						
-	($x5 $y5 0.001) 							//Vertice 37								
-	($x6 $y6 0.001) 							//Vertice 38								
-	($x6 $altura2 0.001) 							//Vertice 39							
-	($x8 $y8 0.001) 							//Vertice 40								
-	($x9 $y9 0.001) 							//Vertice 41								
-	($x10 $y10 0.001) 							//Vertice 42
-	($x11 $y11 0.001) 							//Vertice 43
-	($x12 $y12 0.001) 							//Vertice 44
-	($x13 $y13 0.001) 							//Vertice 45
-	($x15 $maltura2 0.001) 						//Vertice 46
-	($x15 $y15 0.001)							//Vertice 47
-	($x16 $y12 0.001) 							//Vertice 48
-	($x16 $y13 0.001) 							//Vertice 49
-	($x18 $y18 0.001) 							//Vertice 50
-	($x18 $altura2 0.001) 							//Vertice 51
-	($x22 $maltura2 0.001) 						//Vertice 52
-	($x22 $y15 0.001) 							//Vertice 53
-	($x22 $y12 0.001) 							//Vertice 54
-	($x22 $y13 0.001) 							//Vertice 55
-	($x22 $y18 0.001) 							//Vertice 56
-	($x22 $altura2 0.001) 							//Vertice 57
-	($xsalida $maltura2 0.001) 						//Vertice 58
-	($xsalida $y15 0.001) 							//Vertice 59
-	($xsalida $y12 0.001) 							//Vertice 60
-	($xsalida $y13 0.001) 							//Vertice 61
-	($xsalida $y18 0.001) 							//Vertice 62
-	($xsalida $altura2 0.001) 						//Vertice 63
+	($xentrada $maltura2 0.01) 			 			//Vertice 32			
+	($xentrada $y5 0.01) 							//Vertice 33 							
+	($xentrada $y6 0.01) 							//Vertice 34							
+	($xentrada $altura2 0.01) 						//Vertice 35 					
+	($x5 $maltura2 0.01) 							//Vertice 36 						
+	($x5 $y5 0.01) 							//Vertice 37								
+	($x6 $y6 0.01) 							//Vertice 38								
+	($x6 $altura2 0.01) 							//Vertice 39							
+	($x8 $y8 0.01) 							//Vertice 40								
+	($x9 $y9 0.01) 							//Vertice 41								
+	($x10 $y10 0.01) 							//Vertice 42
+	($x11 $y11 0.01) 							//Vertice 43
+	($x12 $y12 0.01) 							//Vertice 44
+	($x13 $y13 0.01) 							//Vertice 45
+	($x15 $maltura2 0.01) 						//Vertice 46
+	($x15 $y15 0.01)							//Vertice 47
+	($x16 $y12 0.01) 							//Vertice 48
+	($x16 $y13 0.01) 							//Vertice 49
+	($x18 $y18 0.01) 							//Vertice 50
+	($x18 $altura2 0.01) 							//Vertice 51
+	($x22 $maltura2 0.01) 						//Vertice 52
+	($x22 $y15 0.01) 							//Vertice 53
+	($x22 $y12 0.01) 							//Vertice 54
+	($x22 $y13 0.01) 							//Vertice 55
+	($x22 $y18 0.01) 							//Vertice 56
+	($x22 $altura2 0.01) 							//Vertice 57
+	($xsalida $maltura2 0.01) 						//Vertice 58
+	($xsalida $y15 0.01) 							//Vertice 59
+	($xsalida $y12 0.01) 							//Vertice 60
+	($xsalida $y13 0.01) 							//Vertice 61
+	($xsalida $y18 0.01) 							//Vertice 62
+	($xsalida $altura2 0.01) 						//Vertice 63
 );
 
 a 0.002508834263;
@@ -121,37 +121,37 @@ mcy -0.0007767957411;
 edges
 (
 	arc 5 6 ($ma 0 0)
-	arc 37 38 ($ma 0 0.001)
+	arc 37 38 ($ma 0 0.01)
 	arc 8 9 ($mr 0 0)
-	arc 40 41 ($mr 0 0.001)
+	arc 40 41 ($mr 0 0.01)
 	arc 5 15 (0 $ma 0)
-	arc 37 47 (0 $ma 0.001)
+	arc 37 47 (0 $ma 0.01)
 	arc 8 10 (0 $mr 0)
-	arc 40 42 (0 $mr 0.001)
+	arc 40 42 (0 $mr 0.01)
 	arc 9 11 (0 $r 0)
-	arc 41 43 (0 $r 0.001)
+	arc 41 43 (0 $r 0.01)
 	arc 6 18 (0 $a 0)
-	arc 38 50 (0 $a 0.001)
+	arc 38 50 (0 $a 0.01)
 	arc 10 12 ($bx $mby 0)
-	arc 42 44 ($bx $mby 0.001)
+	arc 42 44 ($bx $mby 0.01)
 	arc 15 16 ($cx $mcy 0)
-	arc 47 48 ($cx $mcy 0.001)
+	arc 47 48 ($cx $mcy 0.01)
 	arc 11 13 ($bx $by 0)
-	arc 43 45 ($bx $by 0.001)
+	arc 43 45 ($bx $by 0.01)
 	arc 17 18 ($cx $cy 0)
-	arc 49 50 ($cx $cy 0.001)
+	arc 49 50 ($cx $cy 0.01)
 );
 
-NxUpstream 40;
-NxEstela 125;
-NxVarilla 5;
-NyVarilla 5;
-NxAla 70;
-NyAla 5;
+NxUpstream 20;
+NxEstela 80;
+NxVarilla 3;
+NyVarilla 3;
+NxAla 35;
+NyAla 3;
 NyDetrasAla 2;
-NyAbajo 40;
-NyArriba 40;
-Nradial 5;
+NyAbajo 10;
+NyArriba 10;
+Nradial 4;
 
 
 blocks
