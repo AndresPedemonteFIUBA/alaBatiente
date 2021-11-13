@@ -9,8 +9,8 @@ FoamFile
     object      dynamicMeshDict;
 }
 
-ampli (0 0 30); //Amplitud de la oscilacion en grados.
-omeg 6.2832;	//Frecuencia angular de oscilacion en rad/s.
+ampli (0 0 0);
+omeg 0;
 
 dynamicFvMesh dynamicMotionSolverFvMesh;
 
@@ -18,7 +18,7 @@ solvers
 (
 	Forzado
 	{
-		solver interpolatingSolidBody; //Solver con interpolacion SLERP (spherical linear interpolation).
+		solver interpolatingSolidBody;
 		
 		patches
 		(
@@ -26,23 +26,22 @@ solvers
 			ala
 		);
 		
-		CofG (0 0 0.0005);
+		CofG (0 0 0.005);
 		
 		innerDistance 0.0015;
 		
-		outerDistance 0.065;
+		outerDistance 0.1; //0.065
 		
 		solidBodyMotionFunction oscillatingRotatingMotion;
 
 		oscillatingRotatingMotionCoeffs
 		{
-		  origin (0 0 0.0005);
+		  origin (0 0 0.005);
 		  axis (0 0 1);
 		  omega $omeg;
 		  amplitude $ampli;
 		}
 	}
-
 	Deformacion
 	{
 		solver  	displacementLaplacian;
