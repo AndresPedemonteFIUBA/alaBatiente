@@ -23,8 +23,12 @@ boundaryField
 {
     entrada
     {
-        type            fixedValue;
-        value           uniform (1 0 0);
+        type            uniformFixedValue;
+        uniformValue    table
+        (
+        	(0 (0 0 0))
+        	(10 (1 0 0))
+        );
     }
     salida
     {
@@ -32,11 +36,11 @@ boundaryField
     }
     top
     {
-        type            noSlip;
+        type            zeroGradient;
     }
     bottom
     {
-        type            noSlip;
+        type            zeroGradient;
     }
     varilla
     {
