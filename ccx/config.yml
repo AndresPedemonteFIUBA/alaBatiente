@@ -2,12 +2,9 @@ participants:
 
     Solid:
         interfaces:
-        - nodes-mesh: Solid-Mesh-Ala
-          patch: surfaceAla
-          read-data: [ForceAla]
-          write-data: [DisplacementAla]
-        - nodes-mesh: Solid-Mesh-Varilla
-          patch: surfaceVarilla
-          write-data: [DisplacementVarilla]  
+        - nodes-mesh: Solid-Mesh
+          patch: surface
+          read-data: [Force]
+          write-data: [Displacement]
           
 precice-config-file: ../precice-config.xml
