@@ -1,16 +1,8 @@
-/*--------------------------------*- C++ -*----------------------------------*\
-  =========                 |
-  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
-   \\    /   O peration     | Website:  https://openfoam.org
-    \\  /    A nd           | Version:  7
-     \\/     M anipulation  |
-\*---------------------------------------------------------------------------*/
 FoamFile
 {
     version     2.0;
     format      ascii;
     class       volVectorField;
-    location    "0";
     object      U;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
@@ -21,45 +13,61 @@ internalField   uniform (0 0 0);
 
 boundaryField
 {
-    entrada
+
+    cylinder
     {
-        type            uniformFixedValue;
-        uniformValue    table
-        (
-        	(0 (0 0 0))
-        	(10 (1 0 0))
-        );
-    }
-    salida
-    {
-        type            zeroGradient;
-    }
-    top
-    {
-        type            zeroGradient;
-    }
-    bottom
-    {
-        type            zeroGradient;
-    }
-    varilla
-    {
-        type            noSlip;
-    }
-    ala
+        type            movingWallVelocity;
+        value           uniform (0 0 0);
+    }    
+
+    flapSide
     {
         type            movingWallVelocity;
         value           uniform (0 0 0);
     }
-    front
+    flapTop
     {
-        type            empty;
+        type            movingWallVelocity;
+        value           uniform (0 0 0);
+    }
+    flapBottom
+    {
+        type            movingWallVelocity;
+        value           uniform (0 0 0);
+    }
+
+    top
+    {
+        type            slip;
+    }
+
+    bottom
+    {
+        type            slip;
+    }
+
+    inlet
+    {
+     	type            uniformFixedValue;
+        uniformValue    table
+        (
+        	(0 (0.0 0.0 0.0))
+        	(1 (1.0 0.0 0.0))
+        );
+    }
+
+    outlet
+    {
+        type            zeroGradient;
     }
     back
     {
         type            empty;
     }
+    front
+    {
+        type            empty;
+    }
 }
-
 
 // ************************************************************************* //

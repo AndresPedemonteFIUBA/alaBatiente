@@ -2,9 +2,17 @@ participants:
 
     Solid:
         interfaces:
-        - nodes-mesh: Solid-Mesh
-          patch: surface
-          read-data: [Force]
-          write-data: [Displacement]
+        - nodes-mesh: Solid-Mesh-Top
+          patch: Top
+          read-data: [Force-Top]
+          write-data: [Displacement-Top]
+        - nodes-mesh: Solid-Mesh-Bottom
+          patch: Bottom
+          read-data: [Force-Bottom]
+          write-data: [Displacement-Bottom]
+        - nodes-mesh: Solid-Mesh-Side
+          patch: Side
+          read-data: [Force-Side]
+          write-data: [Displacement-Side]
           
 precice-config-file: ../precice-config.xml

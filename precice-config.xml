@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" ?>
 <precice-configuration>
   <log>
     <sink
@@ -8,88 +8,145 @@
   </log>
 
   <solver-interface dimensions="2">
-    <data:vector name="Force" />
-    <data:vector name="Displacement" />
+    <data:vector name="Force-Top" />
+    <data:vector name="Displacement-Top" />
+    <data:vector name="Force-Bottom" />
+    <data:vector name="Displacement-Bottom" />
+    <data:vector name="Force-Side" />
+    <data:vector name="Displacement-Side" />
 
-    <mesh name="Fluid-Mesh">
-      <use-data name="Force" />
-      <use-data name="Displacement" />
+
+    <mesh name="Fluid-Mesh-Nodes-Top">
+      <use-data name="Displacement-Top" />
     </mesh>
-
-    <mesh name="Solid-Mesh">
-      <use-data name="Displacement" />
-      <use-data name="Force" />
+    <mesh name="Fluid-Mesh-Centers-Top">
+      <use-data name="Force-Top" />
+    </mesh>
+    <mesh name="Solid-Mesh-Top">
+      <use-data name="Displacement-Top" />
+      <use-data name="Force-Top" />
+    </mesh>    
+    <mesh name="Fluid-Mesh-Nodes-Bottom">
+      <use-data name="Displacement-Bottom" />
+    </mesh>    
+    <mesh name="Fluid-Mesh-Centers-Bottom">
+      <use-data name="Force-Bottom" />
+    </mesh>
+    <mesh name="Solid-Mesh-Bottom">
+      <use-data name="Displacement-Bottom" />
+      <use-data name="Force-Bottom" />
+    </mesh>    
+    <mesh name="Fluid-Mesh-Nodes-Side">
+      <use-data name="Displacement-Side" />
+    </mesh>    
+    <mesh name="Fluid-Mesh-Centers-Side">
+      <use-data name="Force-Side" />
+    </mesh>
+    <mesh name="Solid-Mesh-Side">
+      <use-data name="Displacement-Side" />
+      <use-data name="Force-Side" />
     </mesh>
 
     <participant name="Fluid">
-      <use-mesh name="Fluid-Mesh" provide="yes" />
-      <!--<export:vtk directory="preCICE-output" />-->
-      <use-mesh name="Solid-Mesh" from="Solid" />
-      <write-data name="Force" mesh="Fluid-Mesh" />
-      <read-data name="Displacement" mesh="Fluid-Mesh" />
-      
-      
-      <mapping:rbf-compact-tps-c2
-      	solver-rtol="1e-09" 
-      	support-radius="1e-6"
+      <use-mesh name="Fluid-Mesh-Nodes-Top" provide="yes"/>
+      <use-mesh name="Fluid-Mesh-Centers-Top" provide="yes"/>
+      <use-mesh name="Solid-Mesh-Top" from="Solid"/>
+      <read-data name="Displacement-Top" mesh="Fluid-Mesh-Nodes-Top"/>
+      <write-data name="Force-Top" mesh="Fluid-Mesh-Centers-Top" />
+       <mapping:rbf-compact-tps-c2
+        support-radius="0.005" 
         direction="write"
-        from="Fluid-Mesh"
-        to="Solid-Mesh"
-        constraint="conservative" /> 
+        from="Fluid-Mesh-Centers-Top"
+        to="Solid-Mesh-Top"
+        constraint="conservative"
+        y-dead="true"/>
+       <mapping:rbf-compact-tps-c2
+        support-radius="0.005"
+        direction="read"
+        from="Solid-Mesh-Top"
+        to="Fluid-Mesh-Nodes-Top"
+        constraint="consistent" 
+        y-dead="true"/>
+      <use-mesh name="Fluid-Mesh-Nodes-Bottom" provide="yes"/>
+      <use-mesh name="Fluid-Mesh-Centers-Bottom" provide="yes"/>
+      <use-mesh name="Solid-Mesh-Bottom" from="Solid"/>
+      <read-data name="Displacement-Bottom" mesh="Fluid-Mesh-Nodes-Bottom" />
+      <write-data name="Force-Bottom" mesh="Fluid-Mesh-Centers-Bottom" />
+       <mapping:rbf-compact-tps-c2
+        support-radius="0.005"
+        direction="write"
+        from="Fluid-Mesh-Centers-Bottom"
+        to="Solid-Mesh-Bottom"
+        constraint="conservative" 
+        y-dead="true"/>
+       <mapping:rbf-compact-tps-c2
+        support-radius="0.005"
+        direction="read"
+        from="Solid-Mesh-Bottom"
+        to="Fluid-Mesh-Nodes-Bottom"
+        constraint="consistent"
+        y-dead="true"/>
         
-      <!--  
-      <mapping:nearest-neighbor
+      <use-mesh name="Fluid-Mesh-Nodes-Side" provide="yes"/>
+      <use-mesh name="Fluid-Mesh-Centers-Side" provide="yes"/>
+      <use-mesh name="Solid-Mesh-Side" from="Solid"/>
+      <read-data name="Displacement-Side" mesh="Fluid-Mesh-Nodes-Side" />
+      <write-data name="Force-Side" mesh="Fluid-Mesh-Centers-Side" />
+       <mapping:nearest-neighbor
         direction="write"
-        from="Fluid-Mesh"
-        to="Solid-Mesh"
+        from="Fluid-Mesh-Centers-Side"
+        to="Solid-Mesh-Side"
         constraint="conservative" />
-        -->
-      <!--
-      <mapping:nearest-neighbor
+       <mapping:nearest-neighbor
         direction="read"
-        from="Solid-Mesh"
-        to="Fluid-Mesh"
+        from="Solid-Mesh-Side"
+        to="Fluid-Mesh-Nodes-Side"
         constraint="consistent" />
-        -->
-      
-      <mapping:rbf-compact-tps-c2
-      	solver-rtol="1e-09" 
-      	support-radius="1e-6"
-        direction="read"
-        from="Solid-Mesh"
-        to="Fluid-Mesh"
-        constraint="consistent" />
-        
-        
     </participant>
 
     <participant name="Solid">
-      <use-mesh name="Solid-Mesh" provide="yes" />
-      <!--<export:vtk directory="preCICE-output" />-->
-      <write-data name="Displacement" mesh="Solid-Mesh" />
-      <read-data name="Force" mesh="Solid-Mesh" />
+      <use-mesh name="Solid-Mesh-Top" provide="yes"/>
+      <read-data name="Force-Top" mesh="Solid-Mesh-Top" />
+      <write-data name="Displacement-Top" mesh="Solid-Mesh-Top" />
+      <use-mesh name="Solid-Mesh-Bottom" provide="yes"/>
+      <read-data name="Force-Bottom" mesh="Solid-Mesh-Bottom" />
+      <write-data name="Displacement-Bottom" mesh="Solid-Mesh-Bottom" />
+      <use-mesh name="Solid-Mesh-Side" provide="yes"/>
+      <read-data name="Force-Side" mesh="Solid-Mesh-Side" />
+      <write-data name="Displacement-Side" mesh="Solid-Mesh-Side" />
     </participant>
 
     <m2n:sockets from="Fluid" to="Solid" exchange-directory=".." />
 
     <coupling-scheme:parallel-implicit>
       <time-window-size value="1e-3" />
-      <max-time value="10" />
+      <max-time value="15" />
       <participants first="Fluid" second="Solid" />
-      <exchange data="Force" mesh="Solid-Mesh" from="Fluid" to="Solid" />
-      <exchange data="Displacement" mesh="Solid-Mesh" from="Solid" to="Fluid" />
+      <exchange data="Force-Top" mesh="Solid-Mesh-Top" from="Fluid" to="Solid" />
+      <exchange data="Displacement-Top" mesh="Solid-Mesh-Top" from="Solid" to="Fluid" />
+      <exchange data="Force-Bottom" mesh="Solid-Mesh-Bottom" from="Fluid" to="Solid" />
+      <exchange data="Displacement-Bottom" mesh="Solid-Mesh-Bottom" from="Solid" to="Fluid" />
+      <exchange data="Force-Side" mesh="Solid-Mesh-Side" from="Fluid" to="Solid" />
+      <exchange data="Displacement-Side" mesh="Solid-Mesh-Side" from="Solid" to="Fluid" />
       <max-iterations value="100" />
-      <relative-convergence-measure limit="5e-3" data="Displacement" mesh="Solid-Mesh" />
-      <relative-convergence-measure limit="5e-3" data="Force" mesh="Solid-Mesh" />
-      <!--<extrapolation-order value="1" />-->
+      <relative-convergence-measure limit="1e-3" data="Force-Top" mesh="Solid-Mesh-Top" />
+      <relative-convergence-measure limit="1e-3" data="Displacement-Top" mesh="Solid-Mesh-Top" />
+      <relative-convergence-measure limit="1e-3" data="Force-Bottom" mesh="Solid-Mesh-Bottom" />
+      <relative-convergence-measure limit="1e-3" data="Displacement-Bottom" mesh="Solid-Mesh-Bottom" />
+      <relative-convergence-measure limit="1e-3" data="Force-Side" mesh="Solid-Mesh-Side" />
+      <relative-convergence-measure limit="1e-3" data="Displacement-Side" mesh="Solid-Mesh-Side" />
       <acceleration:IQN-ILS>
-        <data name="Displacement" mesh="Solid-Mesh" />
-        <data name="Force" mesh="Solid-Mesh" />
+        <data name="Displacement-Top" mesh="Solid-Mesh-Top" />
+        <data name="Force-Top" mesh="Solid-Mesh-Top" />
+        <data name="Displacement-Bottom" mesh="Solid-Mesh-Bottom" />
+        <data name="Force-Bottom" mesh="Solid-Mesh-Bottom" />
+        <data name="Displacement-Side" mesh="Solid-Mesh-Side" />
+        <data name="Force-Side" mesh="Solid-Mesh-Side" />
         <preconditioner type="residual-sum" />
-        <filter type="QR2" limit="1e-2" />
+        <filter type="QR2" limit="1e-3" />
         <initial-relaxation value="0.1" />
-        <max-used-iterations value="100" />
-        <time-windows-reused value="20" />
+        <max-used-iterations value="60" />
+        <time-windows-reused value="10" />
       </acceleration:IQN-ILS>
     </coupling-scheme:parallel-implicit>
   </solver-interface>

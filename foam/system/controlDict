@@ -1,45 +1,45 @@
-//Diccionario de control para el caso ala batiente v1
-
 FoamFile
 {
     version     2.0;
     format      ascii;
     class       dictionary;
-    location    "system";
+    location    system;
     object      controlDict;
 }
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-libs ( "libgroovyBC.so" ) ; //Necesario para el perfil de velocidad a la entrada.
+libs ( "librampAngularOscillatingDisplacementPointPatchVectorField.so" "libOpenFOAM.so" )
 
-application     pimpleFoam; 
 
-startFrom       startTime;
+application         pimpleFoam;
 
-startTime       0;
 
-stopAt          endTime;
+startFrom           startTime;
 
-endTime         10;
+startTime           0;
 
-deltaT          1e-3;
+stopAt              endTime;
 
-writeControl    adjustableRunTime;
+endTime             100;
 
-writeInterval   0.05;
+deltaT              1e-3;
 
-purgeWrite      0;
+writeControl        adjustableRunTime;
 
-writeFormat     ascii;
+writeInterval       0.01;
 
-writePrecision  8;
+purgeWrite          0;
 
-writeCompression off;
+writeFormat         binary;
 
-timeFormat      general;
+writePrecision      16;
 
-timePrecision   8;
+writeCompression    off;
 
-//Llamamos al adaptador de preCICE para poder acoplar OF con Calculix
+timeFormat          general;
+
+timePrecision       8;
+
 
 functions
 {

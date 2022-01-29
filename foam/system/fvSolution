@@ -1,5 +1,3 @@
-//Diccionario de ajustes de solvers para el caso FSI2
-
 FoamFile
 {
     version     2.0;
@@ -23,7 +21,7 @@ solvers
     pFinal
     {
         $p;
-        tolerance       1e-07;
+        tolerance       1e-7;
         relTol          0;
     }
 
@@ -46,15 +44,15 @@ solvers
         $p;
     }
 
-    "(U|cellDisplacement)"
+    "(U|cellDisplacement|pointDisplacement)"
     {
         solver          smoothSolver;
         smoother        symGaussSeidel;
-        tolerance       1e-8;
+        tolerance       1e-7;
         relTol          1e-6;
     }
 
-    "(U|cellDisplacement)Final"
+    "(U|cellDisplacement|pointDisplacement)Final"
     {
         $U;
         relTol          0;
@@ -63,7 +61,7 @@ solvers
 
 PIMPLE
 {
-    nOuterCorrectors 50;
+    nOuterCorrectors 150;
     nCorrectors 2;
     nNonOrthogonalCorrectors 1;
     tolerance 1.0e-12;
@@ -72,13 +70,14 @@ PIMPLE
     relTol 1e-4;
     pisoTol 1e-6;
     consistent  true;
-
-    residualControl
+    outerCorrectorResidualControl
     {
-        U 1e-5;
-        p 1e-5;
+        "(U|p)"
+        {
+            relTol          1e-5;
+            tolerance	     1e-5;
+        }
     }
-
 }
 PISO
 {
@@ -89,3 +88,5 @@ potentialFlow
     nNonOrthogonalCorrectors 1;
 }
 
+
+// ************************************************************************* //

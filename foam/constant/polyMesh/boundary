@@ -1,0 +1,88 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      binary;
+    class       polyBoundaryMesh;
+    location    "constant/polyMesh";
+    object      boundary;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+10
+(
+    inlet
+    {
+        type            patch;
+        nFaces          122;
+        startFace       79313;
+    }
+    outlet
+    {
+        type            patch;
+        nFaces          125;
+        startFace       79435;
+    }
+    top
+    {
+        type            patch;
+        nFaces          319;
+        startFace       79560;
+    }
+    bottom
+    {
+        type            patch;
+        nFaces          319;
+        startFace       79879;
+    }
+    flapTop
+    {
+        type            wall;
+        inGroups        List<word> 1(wall);
+        nFaces          79;
+        startFace       80198;
+    }
+    flapBottom
+    {
+        type            wall;
+        inGroups        List<word> 1(wall);
+        nFaces          79;
+        startFace       80277;
+    }
+    flapSide
+    {
+        type            wall;
+        inGroups        List<word> 1(wall);
+        nFaces          1;
+        startFace       80356;
+    }
+    cylinder
+    {
+        type            wall;
+        inGroups        List<word> 1(wall);
+        nFaces          42;
+        startFace       80357;
+    }
+    front
+    {
+        type            empty;
+        inGroups        List<word> 1(empty);
+        nFaces          39928;
+        startFace       80399;
+    }
+    back
+    {
+        type            empty;
+        inGroups        List<word> 1(empty);
+        nFaces          39928;
+        startFace       120327;
+    }
+)
+
+// ************************************************************************* //
