@@ -139,7 +139,7 @@
 	ang1=ASIN(0.000025/0.0015)
 	ang2=ASIN(-0.000025/0.0015)
 !
-     	if(time(2) .lt. 10.0) then
+     	if(time(2) .lt. 5.0) then
      	 amplitude=(time(2)/5.0)*sin(omega*(1.0/10.0)*(time(2)**2.0))
      	else
          amplitude=sin(omega*time(2))

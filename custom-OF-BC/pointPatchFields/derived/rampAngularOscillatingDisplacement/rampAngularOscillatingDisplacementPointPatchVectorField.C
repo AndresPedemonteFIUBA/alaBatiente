@@ -159,7 +159,7 @@ void rampAngularOscillatingDisplacementPointPatchVectorField::updateCoeffs()
     const Time& t = mesh.time();
 	
     scalar angle;
-    if (t.value() < 10.0)
+    if (t.value() < 5.0)
     {
     	angle = angle0_ + (t.value()/5.0)*amplitude_*sin(omega_*(1.0/10.0)*t.value()*t.value());
     }
