@@ -1,0 +1,3 @@
+derivedPoint = pointPatchFields/derived
+$(derivedPoint)/rampAngularOscillatingDisplacement/rampAngularOscillatingDisplacementPointPatchVectorField.C
+LIB = $(FOAM_USER_LIBBIN)/librampAngularOscillatingDisplacementPointPatchVectorField
