@@ -1,3 +1,4 @@
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 FoamFile
 {
     version     2.0;
@@ -13,18 +14,8 @@ dynamicFvMesh dynamicMotionSolverFvMesh;
 
 motionSolverLibs ("libfvMotionSolvers.so");
 
-solver displacementSBRStress;
-		diffusivity inverseDistance 
-		(
-			flapTop
-			flapBottom
-			flapSide
-			cylinder
-		);
-/*
 solvers
 (
-	
 	Deformacion
 	{
 	      	solver	displacementLaplacian;
@@ -40,10 +31,4 @@ solvers
 		);
 		}
 	}
-	
-	Deformacion
-	{
-		
-	}
 );
-*/
