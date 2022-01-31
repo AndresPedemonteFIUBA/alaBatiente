@@ -6,7 +6,6 @@ FoamFile
     class           dictionary;
     object          blockMeshDict;
 }
-
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
 vertices
@@ -91,7 +90,7 @@ N3y 56;
 //N4y = N1y
 N4x 10;
 
-Nr 10;
+Nr 8;
 
 //N8x = N4x
 //N8y = N3y
@@ -106,8 +105,8 @@ N10x 69;
 Nxout 184;
 NyWake 1;
 
-Gr 4;
-GrInv 0.25;
+Gr 2;
+GrInv 0.5;
 
 blocks
 (
@@ -125,11 +124,11 @@ blocks
 	hex (15 21 22 16 47 53 54 48) ($N10x $N9y 1) simpleGrading (1 1 1)
 	hex (17 23 24 18 49 55 56 50) ($N10x $N9y 1) simpleGrading (1 1 1)
 	hex (18 24 25 19 50 56 57 51) ($N10x $N3y 1) simpleGrading (1 1 1)
-	hex (20 26 27 21 52 58 59 53) ($Nxout $N1y 1) simpleGrading (5 1 1)
-	hex (21 27 28 22 53 59 60 54) ($Nxout $N9y 1) simpleGrading (5 1 1)
-	hex (22 28 29 23 54 60 61 55) ($Nxout $NyWake 1) simpleGrading (5 1 1)
-	hex (23 29 30 24 55 61 62 56) ($Nxout $N9y 1) simpleGrading (5 1 1)
-	hex (24 30 31 25 56 62 63 57) ($Nxout $N3y 1) simpleGrading (5 1 1)
+	hex (20 26 27 21 52 58 59 53) ($Nxout $N1y 1) simpleGrading (3 1 1)
+	hex (21 27 28 22 53 59 60 54) ($Nxout $N9y 1) simpleGrading (3 1 1)
+	hex (22 28 29 23 54 60 61 55) ($Nxout $NyWake 1) simpleGrading (3 1 1)
+	hex (23 29 30 24 55 61 62 56) ($Nxout $N9y 1) simpleGrading (3 1 1)
+	hex (24 30 31 25 56 62 63 57) ($Nxout $N3y 1) simpleGrading (3 1 1)
 );
 
 

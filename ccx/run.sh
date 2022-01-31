@@ -1,1 +1,1 @@
-ccx_preCICE -i ala -precice-participant Solid
+ccx_preCICE -i ala -precice-participant Solid | tee log-CalculiX.txt

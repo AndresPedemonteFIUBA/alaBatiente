@@ -1,4 +1,3 @@
-// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 FoamFile
 {
     version     2.0;
@@ -7,7 +6,6 @@ FoamFile
     location    "system";
     object      preciceDict;
 }
-// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
 preciceConfig "../precice-config.xml";
 

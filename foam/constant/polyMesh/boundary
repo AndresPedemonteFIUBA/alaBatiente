@@ -20,68 +20,65 @@ FoamFile
     inlet
     {
         type            patch;
-        nFaces          122;
-        startFace       79313;
+        nFaces          160;
+        startFace       83272;
     }
     outlet
     {
         type            patch;
-        nFaces          125;
-        startFace       79435;
+        nFaces          160;
+        startFace       83432;
     }
     top
     {
         type            patch;
-        nFaces          319;
-        startFace       79560;
+        nFaces          250;
+        startFace       83592;
     }
     bottom
     {
         type            patch;
-        nFaces          319;
-        startFace       79879;
-    }
-    flapTop
-    {
-        type            wall;
-        inGroups        List<word> 1(wall);
-        nFaces          79;
-        startFace       80198;
-    }
-    flapBottom
-    {
-        type            wall;
-        inGroups        List<word> 1(wall);
-        nFaces          79;
-        startFace       80277;
-    }
-    flapSide
-    {
-        type            wall;
-        inGroups        List<word> 1(wall);
-        nFaces          1;
-        startFace       80356;
-    }
-    cylinder
-    {
-        type            wall;
-        inGroups        List<word> 1(wall);
-        nFaces          42;
-        startFace       80357;
+        nFaces          250;
+        startFace       83842;
     }
     front
     {
         type            empty;
         inGroups        List<word> 1(empty);
-        nFaces          39928;
-        startFace       80399;
+        nFaces          41844;
+        startFace       84092;
     }
     back
     {
         type            empty;
         inGroups        List<word> 1(empty);
-        nFaces          39928;
-        startFace       120327;
+        nFaces          41844;
+        startFace       125936;
+    }
+    flapBottom
+    {
+        type            patch;
+        nFaces          146;
+        startFace       167780;
+    }
+    flapSide
+    {
+        type            patch;
+        nFaces          2;
+        startFace       167926;
+    }
+    flapTop
+    {
+        type            patch;
+        nFaces          146;
+        startFace       167928;
+    }
+    cylinder
+    {
+        type            wall;
+        inGroups        List<word> 1(wall);
+        nFaces          68;
+        startFace       168074;
     }
 )
 

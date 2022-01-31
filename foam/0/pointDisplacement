@@ -28,7 +28,7 @@ boundaryField
 
     cylinder
     {
-        type           rampAngularOscillatingDisplacement;
+        type           angularOscillatingDisplacement;
 	axis		(0 0 1);
 	origin		(0.03 0.03 0);
 	angle0		0;
@@ -54,12 +54,14 @@ boundaryField
     
     top
     {
-        type            slip;
+        type            fixedValue;
+        value           uniform (0 0 0);
     }
 
     bottom
     {
-        type            slip;
+        type            fixedValue;
+        value           uniform (0 0 0);
     }
     back
     {
