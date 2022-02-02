@@ -3,7 +3,7 @@
 ## Ramas
 
 Actualmente:
-* `master` branch -> malla hecha con snappy (podría mejorarse un poco; quizás necesitas algunos puntos más en la capa límite).
+* `main` branch -> malla hecha con snappy (podría mejorarse un poco; quizás necesitas algunos puntos más en la capa límite).
 * `conBlockMesh` branch -> malla hecha a manopla con blockMesh. En algunas partes es medio lío el archivo. Habría que limpiarlo un poquito, definir variables y comentar.
 
 ## Condiciones de contorno personalizadas
