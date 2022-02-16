@@ -14,6 +14,7 @@ libs ( "librampAngularOscillatingDisplacementPointPatchVectorField.so" "libOpenF
 
 application         pimpleFoam;
 
+
 startFrom           startTime;
 
 startTime           0;
@@ -22,7 +23,7 @@ stopAt              endTime;
 
 endTime             100;
 
-deltaT              5e-4;
+deltaT              1e-4;
 
 writeControl        adjustableRunTime;
 
@@ -32,6 +33,8 @@ purgeWrite          0;
 
 writeFormat         binary;
 
+runTimeModifiable   true;
+
 writePrecision      12;
 
 writeCompression    off;
@@ -39,8 +42,6 @@ writeCompression    off;
 timeFormat          general;
 
 timePrecision       8;
-
-runTimeModifiable   true;
 
 
 functions

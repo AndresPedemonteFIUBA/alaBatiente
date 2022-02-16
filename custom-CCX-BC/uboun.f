@@ -133,26 +133,26 @@
 !
       intent(out) boun
       real*8 amplitude,ang1,ang2,ang0,x1,x2,y1,y2
-      real, parameter :: omega=62.83185307
-      real, parameter :: r=0.0015
+      real, parameter :: omega=75.55279004
+      real, parameter :: r=0.001
 !
-	ang1=ASIN(0.000025/0.0015)
-	ang2=ASIN(-0.000025/0.0015)
+	ang1=ASIN(0.000025/r)
+	ang2=ASIN(-0.000025/r)
 	ang0=0
 !
-!     	if(time(2) .lt. 10.0) then
-!     	 amplitude=(time(2)/5.0)*sin(omega*(1.0/10.0)*(time(2)**2.0))
+!    	if(time(2) .lt. 10.0) then
+!    	 amplitude=(time(2)/0.1)*sin(omega*(1.0/10.0)*(time(2)**2.0))
 !     	else
 !         amplitude=sin(omega*time(2))
 !        endif
-!       if(time(2) .lt. 1.0) then
-!     	  amplitude=(time(2)/1.0)*sin(omega*(1.0/2.0)*(time(2)**2.0))
+!       if(time(2) .lt. 1) then
+!    	  amplitude=(time(2)/1)*sin(omega*(1.0/2)*(time(2)**2.0))
 !     	else
 !         amplitude=sin(omega*time(2))
 !       endif
 !        
         amplitude=sin(omega*time(2))
-        
+!        
 !
 	x1=-r*abs(cos(amplitude*10.0*4.d0*datan(1.d0)/180.0))+r
 	y1=r*sin(amplitude*10.0*4.d0*datan(1.d0)/180.0)
@@ -173,25 +173,66 @@
 !      	endif
 !      endif
 !
-      if((node.eq.101).OR.(node.eq.202)) then
+!      if((node.eq.101).OR.(node.eq.202)) then
+!      	if(idof.eq.1) then
+!      		boun=-x2*cos(ang2)-y2*sin(ang2)
+!      	else if(idof.eq.2) then
+!      		boun=y2*cos(ang2)+x2*sin(ang2)
+!      	endif
+!      else if((node.eq.606).OR.(node.eq.505)) then
+!      	if(idof.eq.1) then
+!      		boun=-x1*cos(ang1)-y1*sin(ang1)
+!      	else if(idof.eq.2) then
+!      		boun=y1*cos(ang1)+x1*sin(ang1)
+!      	endif
+!      else if((node.eq.303).OR.(node.eq.404)) then
+!      	if(idof.eq.1) then
+!      		boun=-x1*cos(ang0)-y1*sin(ang0)
+!      	else if(idof.eq.2) then
+!      		boun=y1*cos(ang0)+x1*sin(ang0)
+!      	endif
+!      endif
+!      
+      if((node.eq.121).OR.(node.eq.242)) then
       	if(idof.eq.1) then
       		boun=-x2*cos(ang2)-y2*sin(ang2)
       	else if(idof.eq.2) then
       		boun=y2*cos(ang2)+x2*sin(ang2)
-      	endif
-      else if((node.eq.606).OR.(node.eq.505)) then
+        endif
+      else if((node.eq.605).OR.(node.eq.726)) then
       	if(idof.eq.1) then
       		boun=-x1*cos(ang1)-y1*sin(ang1)
       	else if(idof.eq.2) then
       		boun=y1*cos(ang1)+x1*sin(ang1)
       	endif
-      else if((node.eq.303).OR.(node.eq.404)) then
+      else if((node.eq.363).OR.(node.eq.484)) then
       	if(idof.eq.1) then
       		boun=-x1*cos(ang0)-y1*sin(ang0)
       	else if(idof.eq.2) then
       		boun=y1*cos(ang0)+x1*sin(ang0)
       	endif
       endif
+!      
+!      if((node.eq.201).OR.(node.eq.402)) then
+!      	if(idof.eq.1) then
+!      		boun=-x2*cos(ang2)-y2*sin(ang2)
+!      	else if(idof.eq.2) then
+!      		boun=y2*cos(ang2)+x2*sin(ang2)
+!        endif
+!      else if((node.eq.1005).OR.(node.eq.1206)) then
+!      	if(idof.eq.1) then
+!      		boun=-x1*cos(ang1)-y1*sin(ang1)
+!      	else if(idof.eq.2) then
+!      		boun=y1*cos(ang1)+x1*sin(ang1)
+!      	endif
+!      else if((node.eq.603).OR.(node.eq.804)) then
+!      	if(idof.eq.1) then
+!      		boun=-x1*cos(ang0)-y1*sin(ang0)
+!      	else if(idof.eq.2) then
+!      		boun=y1*cos(ang0)+x1*sin(ang0)
+!      	endif
+!      endif
+!   
       return
       end
 

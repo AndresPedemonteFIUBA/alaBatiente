@@ -20,65 +20,68 @@ FoamFile
     inlet
     {
         type            patch;
-        nFaces          160;
-        startFace       83272;
+        nFaces          110;
+        startFace       67928;
     }
     outlet
     {
         type            patch;
-        nFaces          160;
-        startFace       83432;
+        nFaces          122;
+        startFace       68038;
     }
     top
     {
         type            patch;
-        nFaces          250;
-        startFace       83592;
+        nFaces          280;
+        startFace       68160;
     }
     bottom
     {
         type            patch;
-        nFaces          250;
-        startFace       83842;
-    }
-    front
-    {
-        type            empty;
-        inGroups        List<word> 1(empty);
-        nFaces          41844;
-        startFace       84092;
-    }
-    back
-    {
-        type            empty;
-        inGroups        List<word> 1(empty);
-        nFaces          41844;
-        startFace       125936;
-    }
-    flapBottom
-    {
-        type            patch;
-        nFaces          146;
-        startFace       167780;
-    }
-    flapSide
-    {
-        type            patch;
-        nFaces          2;
-        startFace       167926;
+        nFaces          280;
+        startFace       68440;
     }
     flapTop
     {
-        type            patch;
-        nFaces          146;
-        startFace       167928;
+        type            wall;
+        inGroups        List<word> 1(wall);
+        nFaces          130;
+        startFace       68720;
+    }
+    flapBottom
+    {
+        type            wall;
+        inGroups        List<word> 1(wall);
+        nFaces          130;
+        startFace       68850;
+    }
+    flapSide
+    {
+        type            wall;
+        inGroups        List<word> 1(wall);
+        nFaces          2;
+        startFace       68980;
     }
     cylinder
     {
         type            wall;
         inGroups        List<word> 1(wall);
-        nFaces          68;
-        startFace       168074;
+        nFaces          50;
+        startFace       68982;
+    }
+    front
+    {
+        type            empty;
+        inGroups        List<word> 1(empty);
+        nFaces          34240;
+        startFace       69032;
+    }
+    back
+    {
+        type            empty;
+        inGroups        List<word> 1(empty);
+        nFaces          34240;
+        startFace       103272;
     }
 )
 

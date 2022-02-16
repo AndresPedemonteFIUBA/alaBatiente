@@ -119,8 +119,8 @@
     <m2n:sockets from="Fluid" to="Solid" exchange-directory=".." />
 
     <coupling-scheme:parallel-implicit>
-      <time-window-size value="1e-3" />
-      <max-time value="15" />
+      <time-window-size value="1e-4" />
+      <max-time value="2" />
       <participants first="Fluid" second="Solid" />
       <exchange data="Force-Top" mesh="Solid-Mesh-Top" from="Fluid" to="Solid" />
       <exchange data="Displacement-Top" mesh="Solid-Mesh-Top" from="Solid" to="Fluid" />
@@ -128,7 +128,7 @@
       <exchange data="Displacement-Bottom" mesh="Solid-Mesh-Bottom" from="Solid" to="Fluid" />
       <exchange data="Force-Side" mesh="Solid-Mesh-Side" from="Fluid" to="Solid" />
       <exchange data="Displacement-Side" mesh="Solid-Mesh-Side" from="Solid" to="Fluid" />
-      <max-iterations value="100" />
+      <max-iterations value="150" />
       <relative-convergence-measure limit="1e-3" data="Force-Top" mesh="Solid-Mesh-Top" />
       <relative-convergence-measure limit="1e-3" data="Displacement-Top" mesh="Solid-Mesh-Top" />
       <relative-convergence-measure limit="1e-3" data="Force-Bottom" mesh="Solid-Mesh-Bottom" />
@@ -145,7 +145,7 @@
         <preconditioner type="residual-sum" />
         <filter type="QR2" limit="1e-3" />
         <initial-relaxation value="0.1" />
-        <max-used-iterations value="60" />
+        <max-used-iterations value="70" />
         <time-windows-reused value="10" />
       </acceleration:IQN-ILS>
     </coupling-scheme:parallel-implicit>

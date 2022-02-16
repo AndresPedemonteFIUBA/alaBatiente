@@ -1,5 +1,4 @@
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
-
 FoamFile
 {
     version     2.0;
@@ -17,7 +16,6 @@ motionSolverLibs ("libfvMotionSolvers.so");
 
 solvers
 (
-	
 	Deformacion
 	{
 	      	solver	displacementLaplacian;
@@ -34,3 +32,4 @@ solvers
 		}
 	}
 );
+

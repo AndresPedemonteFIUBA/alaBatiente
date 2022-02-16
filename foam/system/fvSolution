@@ -1,3 +1,4 @@
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 FoamFile
 {
     version     2.0;
@@ -14,7 +15,7 @@ solvers
     {
         solver           GAMG;
         tolerance        1e-6;
-        relTol           1e-5;
+        relTol           1e-4;
         smoother         DICGaussSeidel;
     }
 
@@ -29,7 +30,7 @@ solvers
     {
         solver           GAMG;
         tolerance        1e-5;
-        relTol           1e-4;
+        relTol           1e-5;
         smoother         GaussSeidel;
     }
 
@@ -49,7 +50,7 @@ solvers
         solver          smoothSolver;
         smoother        symGaussSeidel;
         tolerance       1e-7;
-        relTol          1e-6;
+        relTol          1e-5;
     }
 
     "(U|cellDisplacement|pointDisplacement)Final"
@@ -62,7 +63,7 @@ solvers
 PIMPLE
 {
     nOuterCorrectors 150;
-    nCorrectors 2;
+    nCorrectors 3;
     nNonOrthogonalCorrectors 1;
     tolerance 1.0e-12;
 
@@ -79,14 +80,5 @@ PIMPLE
         }
     }
 }
-PISO
-{
-    nNonOrthogonalCorrectors 1;
-}
-potentialFlow
-{
-    nNonOrthogonalCorrectors 1;
-}
-
 
 // ************************************************************************* //

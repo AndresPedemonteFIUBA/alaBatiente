@@ -33,7 +33,7 @@ boundaryField
 	origin		(0.03 0.03 0);
 	angle0		0;
 	amplitude	0.1745329;
-	omega		62.83185307;
+	omega		75.55279004;
         value          uniform (0 0 0);
     }
     flapTop
@@ -63,6 +63,7 @@ boundaryField
         type            fixedValue;
         value           uniform (0 0 0);
     }
+    
     back
     {
         type            empty;

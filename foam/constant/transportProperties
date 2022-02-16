@@ -1,3 +1,4 @@
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 FoamFile
 {
     version 2.0;
@@ -10,5 +11,5 @@ FoamFile
 
     transportModel Newtonian;
 
-    nu nu [0 2 -1 0 0 0 0 ] 0.0000151;
+    nu nu [0 2 -1 0 0 0 0 ] 1.51e-5;
     pRef pRef [1 -1 -2 0 0 0 0 ] 0.0;

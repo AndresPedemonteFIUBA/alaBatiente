@@ -1,4 +1,3 @@
-// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 FoamFile
 {
     version         2.0;
@@ -6,6 +5,7 @@ FoamFile
     class           dictionary;
     object          blockMeshDict;
 }
+
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
 
@@ -49,25 +49,17 @@ x12 #calc "0.03+$radioVarilla*cos($ang12)";
 x13 #calc "0.03+$radioVarilla*cos($ang13)";
 x14 #calc "$x15";
 x19 #calc "$x18";
-//x22 #calc "0.03+$radioVarilla+$largoAla-$espesorAla/2.0";
-x22 #calc "0.03+$radioVarilla+$largoAla";
+x22 #calc "0.03+$radioVarilla+$largoAla-$espesorAla/2.0";
 y22 #calc "0.03-$espesorAla/2.0";
-//x23 #calc "0.03+$radioVarilla+$largoAla-$espesorAla/2.0";
-x23 #calc "0.03+$radioVarilla+$largoAla";
+x23 #calc "0.03+$radioVarilla+$largoAla-$espesorAla/2.0";
 y23 #calc "0.03+$espesorAla/2.0";
 altura #calc "$ySup-($yInf)";
 calAux #calc "sqrt(pow($altura,2)-pow($espesorAla/2.0,2))";
-/*
 xC  #calc "$calAux+0.03+$radioVarilla+$largoAla-($espesorAla/2.0)";
 x20 #calc "-(sqrt(pow($altura,2)-pow($yInf-0.03,2)))+$xC";
 x25 #calc "$x20";
 x21 #calc "-(sqrt(pow($altura,2)-pow($y15-0.03,2)))+$xC";
 x24 #calc "$x21";
-*/
-x20 #calc "$x22";
-x21 #calc "$x22";
-x24 #calc "$x23";
-x25 #calc "$x23";
 y21 #calc "$y15";
 y24 #calc "$y18";
 y27 #calc "$y21";
@@ -153,22 +145,22 @@ vertices
 ($xOutlet $ySup 0.001)			//Vertex 63
 );
 
-// Parametros de refinamiento de malla.
+// Grid refinement parameters
 
-N0x 40; // Cantidad de celdas en la dirección x en el bloque 0.
-N0y 50; // Cantidad de celdas en la dirección y en el bloque 0.
+N0x 50; // Cantidad de celdas en la dirección x en el bloque 0.
+N0y 88; // Cantidad de celdas en la dirección y en el bloque 0.
 
 // N1x = N0x // Cantidad de celdas en la dirección x en el bloque 1. Igual a N0x.
 N1y 10; // Cantidad de celdas en la dirección y en el bloque 1.
 
 // N2x = N0x // Cantidad de celdas en la dirección x en el bloque 2. Igual a N0x.
-N2y 50; // Cantidad de celdas en la dirección y en el bloque 2.
+N2y 88; // Cantidad de celdas en la dirección y en el bloque 2.
 
 //N3y = N0y / Cantidad de celdas en la dirección y en el bloque 3. Igual a N0y.
 N3x 10; // Cantidad de celdas en la dirección x en el bloque 3.
 
 //N4x = N3x
-Nr 20; // Cantidad de celdas en la dirección radial de los bloques 4 5 6.
+Nr 10; // Cantidad de celdas en la dirección radial de los bloques 4 5 6.
 
 //N5y=N1y
 
@@ -197,29 +189,26 @@ N10x 110; // // Cantidad de celdas en la dirección x en el bloque 10.
 // N13x = N10x (para hacerlo simétrico).
 // N13y = N2y
 
-Nxout 120; // Esto es la cantidad de celdas en x de los bloques 14, 15, 16, 17 y 18.
+Nxout 150; // Esto es la cantidad de celdas en x de los bloques 14, 15, 16, 17 y 18.
 NyWake 2; // Cantidad de celdas en y en el bloque 16.
-GxOutlet 15; // Gradiente de tamaño de celda en la dirección x después del ala hacia el outlet.
+GxOutlet 12; // Gradiente de tamaño de celda en la dirección x después del ala hacia el outlet.
 
-Gr 4; // Gradiente de tamaño de las celdas en la dirección radial para los bloques 4, 5, 6, 8 y 9.
-GrInv 0.25; // Reciproco de Gr.
+Gr 2.5; // Gradiente de tamaño de las celdas en la dirección radial para los bloques 4, 5, 6, 8 y 9.
+GrInv 0.4; // Reciproco de Gr.
 
-GxB0 0.25; // Gradiente de tamaño de las celdas en la dirección x para los bloques 0, 3, 10 y 14.
-GxB2 #calc "$GxB0"; //Igual a GxB0.
+GyB0 1; // Gradiente de tamaño de las celdas en la dirección y para los bloques 0, 3, 10 y 14.
+GyB2 1; //Reciproco de GyB1.
 
-GyB0 0.2; // Gradiente de tamaño de las celdas en la dirección y para los bloques 0, 3, 10 y 14.
-GyB2 5; //Reciproco de GyB0.
-
-Gy8 0.4; //
-Gy9 2.5; // 
+Gy8 0.5; //
+Gy9 2; // 
 
 suma #calc "$N0y+$N2y";
 
 blocks
 (
-	hex (0 4 5 1 32 36 37 33) ($N0x $N0y 1) edgeGrading ($GxB0 $GxB0 $GxB0 $GxB0 $GyB0 $GyB0 $GyB0 $GyB0 1 1 1 1 ) // Bloque 0
-	hex (1 5 6 2 33 37 38 34) ($N0x $N1y 1) simpleGrading ($GxB0 1 1) // Bloque 1
-	hex (2 6 7 3 34 38 39 35) ($N0x $N2y 1) edgeGrading ($GxB2 $GxB2 $GxB2 $GxB2 $GyB2 $GyB2 $GyB2 $GyB2 1 1 1 1) // Bloque 2
+	hex (0 4 5 1 32 36 37 33) ($N0x $N0y 1) edgeGrading (1 1 1 1 $GyB0 $GyB0 $GyB0 $GyB0 1 1 1 1 ) // Bloque 0
+	hex (1 5 6 2 33 37 38 34) ($N0x $N1y 1) simpleGrading (1 1 1) // Bloque 1
+	hex (2 6 7 3 34 38 39 35) ($N0x $N2y 1) edgeGrading (1 1 1 1 $GyB2 $GyB2 $GyB2 $GyB2 1 1 1 1) // Bloque 2
 	hex (4 14 15 5 36 46 47 37) ($N3x $N0y 1) edgeGrading (1 1 1 1 $GyB0 $GyB0 $GyB0 $GyB0 1 1 1 1 ) // Bloque 3
 	hex (5 15 10 8 37 47 42 40) ($N3x $Nr 1) simpleGrading (1 $GrInv 1) // Bloque 4
 	hex (5 8 9 6 37 40 41 38) ($Nr $N1y 1) simpleGrading ($GrInv 1 1) // Bloque 5
@@ -231,16 +220,16 @@ blocks
 	hex (15 21 22 16 47 53 54 48) ($N10x $N8y 1) simpleGrading (1 $Gy8 1) // Bloque 11
 	hex (17 23 24 18 49 55 56 50) ($N10x $N8y 1) simpleGrading (1 $Gy9 1) // Bloque 12
 	hex (18 24 25 19 50 56 57 51) ($N10x $N2y 1) edgeGrading (1 1 1 1 $GyB2 $GyB2 $GyB2 $GyB2 1 1 1 1) // Bloque 13
-	/*
 	hex (22 21 24 23 54 53 56 55) ($N8y 180 1) edgeGrading ($Gy9 $Gy9 $Gy9 $Gy9 1 1 1 1 1 1 1 1)// Bloque 14
 	hex (21 20 25 24 53 52 57 56) ($N0y 180 1) edgeGrading ($GyB2 $GyB2 $GyB0 $GyB0 1 1 1 1 1 1 1 1) // Bloque 15
 	hex (20 26 31 25 52 58 63 57) ($Nxout 180 1) simpleGrading (1 1 1) // Bloque 16
-	*/
+	/*
 	hex (20 26 27 21 52 58 59 53) ($Nxout $N0y 1) edgeGrading ($GxOutlet $GxOutlet $GxOutlet $GxOutlet $GyB0 $GyB0 $GyB0 $GyB0 1 1 1 1 )  // Bloque 14
-	hex (21 27 28 22 53 59 60 54) ($Nxout $N8y 1) edgeGrading ($GxOutlet $GxOutlet $GxOutlet $GxOutlet $Gy8 $Gy8 $Gy8 $Gy8 1 1 1 1) // Bloque 15
+	hex (21 27 28 22 53 59 60 54) ($Nxout $N8y 1) simpleGrading ($GxOutlet $Gy8 1) // Bloque 15
 	hex (22 28 29 23 54 60 61 55) ($Nxout $NyWake 1) simpleGrading ($GxOutlet 1 1) // Bloque 16
-	hex (23 29 30 24 55 61 62 56) ($Nxout $N8y 1) edgeGrading ($GxOutlet $GxOutlet $GxOutlet $GxOutlet $Gy9 $Gy9 $Gy9 $Gy9 1 1 1 1) // Bloque 17
+	hex (23 29 30 24 55 61 62 56) ($Nxout $N8y 1) simpleGrading ($GxOutlet $Gy9 1) // Bloque 17
 	hex (24 30 31 25 56 62 63 57) ($Nxout $N2y 1) edgeGrading ($GxOutlet $GxOutlet $GxOutlet $GxOutlet $GyB2 $GyB2 $GyB2 $GyB2 1 1 1 1 ) // Bloque 18
+	*/
 );
 
 
@@ -276,7 +265,6 @@ y1113 #calc "0.03 + $radioVarilla*sin(degToRad(40))";
 xCilInf 0.03;
 yCilInf #calc "0.03-$radioVarilla";
 
-/*
 x2223 #calc "0.03+$radioVarilla+$largoAla";
 y2223 0.03;
 
@@ -289,36 +277,34 @@ y2425 #calc "($ySup+$y18)/2";
 centro2124 #calc "-sqrt(pow($y24-$y21,2)-pow($y24-0.03,2))+$x24";
 x2124 #calc "$centro2124+($y24-$y21)*cos(radToDeg(0.0))";
 y2124 0.03;
-*/
 
 edges
 (
-	arc 5 6 ($x56 $y56 0) 
-	arc 37 38 ($x56 $y56 0.001) 
-	arc 8 9 ($xCilIzq $yCilIzq 0) 
-	arc 40 41 ($xCilIzq $yCilIzq 0.001) 
+	arc 5 6 ($x56 $y56 0) //Looks good
+	arc 37 38 ($x56 $y56 0.001) //Looks good
+	arc 8 9 ($xCilIzq $yCilIzq 0) //Looks good
+	arc 40 41 ($xCilIzq $yCilIzq 0.001) //Looks good
 
-	arc 8 10 ($xCilInf $yCilInf 0) 
-	arc 40 42 ($xCilInf $yCilInf 0.001) 
-	arc 5 15 ($x515 $y515 0) 
-	arc 37 47 ($x515 $y515 0.001) 
+	arc 8 10 ($xCilInf $yCilInf 0) //Looks good
+	arc 40 42 ($xCilInf $yCilInf 0.001) //Looks good
+	arc 5 15 ($x515 $y515 0) //Looks good
+	arc 37 47 ($x515 $y515 0.001) //Looks good
 	
-	arc 9 11 ($x911 $y911 0) 
-	arc 41 43 ($x911 $y911 0.001) 
-	arc 6 18 ($x618 $y618 0) 
-	arc 38 50 ($x618 $y618 0.001) 
+	arc 9 11 ($x911 $y911 0) //Looks good
+	arc 41 43 ($x911 $y911 0.001) //Looks good
+	arc 6 18 ($x618 $y618 0) //Looks good
+	arc 38 50 ($x618 $y618 0.001) //Looks good
 	
-	arc 10 12 ($x1012 $y1012 0) 
-	arc 42 44 ($x1012 $y1012 0.001) 
-	arc 15 16 ($x1516 $y1516 0) 
-	arc 47 48 ($x1516 $y1516 0.001) 
+	arc 10 12 ($x1012 $y1012 0) //Looks good
+	arc 42 44 ($x1012 $y1012 0.001) //Looks good
+	arc 15 16 ($x1516 $y1516 0) //Looks good
+	arc 47 48 ($x1516 $y1516 0.001) //Looks good
 	
-	arc 13 11 ($x1113 $y1113 0) 
-	arc 45 43 ($x1113 $y1113 0.001) 
-	arc 17 18 ($x1718 $y1718 0) 
-	arc 49 50 ($x1718 $y1718 0.001) 
+	arc 13 11 ($x1113 $y1113 0) //Looks good
+	arc 45 43 ($x1113 $y1113 0.001) //Looks good
+	arc 17 18 ($x1718 $y1718 0) //Looks good
+	arc 49 50 ($x1718 $y1718 0.001) //Looks good
 	
-	/*
 	arc 22 23 ($x2223 $y2223 0)
 	arc 54 55 ($x2223 $y2223 0.001)
 	
@@ -330,7 +316,6 @@ edges
 	
 	arc 24 25 ($x2425 $y2425 0)
 	arc 56 57 ($x2425 $y2425 0.001)
-	*/
 );
 
 boundary
@@ -351,11 +336,7 @@ boundary
 		type patch;
 		faces
 		(
-			(26 27 59 58)
-			(27 28 60 59)
-			(28 29 61 60)
-			(29 30 62 61)
-			(30 31 63 62)
+			(26 31 63 58)
 		);
 	}
 	
@@ -444,16 +425,9 @@ boundary
 			(48 47 53 54)
 			(50 49 55 56)
 			(51 50 56 57)
-			(53 52 58 59)
-			(54 53 59 60)
-			(55 54 60 61)
-			(56 55 61 62)
-			(57 56 62 63)
-			/*
 			(53 54 55 56)
 			(52 53 56 57)
 			(58 52 57 63)
-			*/
 		);
 	}
 	back
@@ -475,16 +449,9 @@ boundary
 			(15 16 22 21)
 			(17 18 24 23)
 			(18 19 25 24)
-			(20 21 27 26)
-			(21 22 28 27)
-			(22 23 29 28)
-			(23 24 30 29)
-			(24 25 31 30)
-			/*
 			(22 21 24 23)
 			(21 20 25 24)
 			(20 26 31 25)
-			*/
 		);
 	}
 

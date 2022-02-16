@@ -1,3 +1,4 @@
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 FoamFile
 {
     version     2.0;
@@ -10,12 +11,12 @@ FoamFile
 
     ddtSchemes
     {
-        default CrankNicolson 0.9;
+        default backward;
     }
 
     gradSchemes
     {
-        default cellLimited Gauss linear 1;
+        default Gauss linear;
     }
 
     divSchemes
