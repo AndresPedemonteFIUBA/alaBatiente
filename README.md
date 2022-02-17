@@ -27,6 +27,8 @@ Para ajustar la frecuencia hay que modificar en dos lugares:
 
 Si tenés Anaconda, usar `conda deactivate` antes de compilar los programas.
 
+https://github.com/precice/openfoam-adapter/issues/202
+
 ## Utilidades
 
 En la carpeta utilidades hay un archivo para habilitar el syntax highlighting para el formato de los archivos de CalculiX en `gedit`. Hay que colocarlo en `usr/share/gtksourceview-4/language-specs`. Se puede habilitar (en el gedit) también para cualquier otro formato de archivo (`.nam`, `.msh`).
