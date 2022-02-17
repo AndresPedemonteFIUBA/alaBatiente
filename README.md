@@ -28,6 +28,7 @@ Para ajustar la frecuencia hay que modificar en dos lugares:
 Si tenés Anaconda, usar `conda deactivate` antes de compilar los programas.
 
 https://github.com/precice/openfoam-adapter/issues/202
+https://github.com/precice/openfoam-adapter/pull/203
 
 ## Utilidades
 
