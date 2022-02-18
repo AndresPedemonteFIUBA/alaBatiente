@@ -16,6 +16,12 @@ Compilar el adaptador de CalculiX reemplazando el archivo `uboun.f` del código 
 
 Llevar la carpeta `custom-OF-BC` a, por ejemplo, `$FOAM_RUN`. En la carpeta, abrir la terminal y escribir `wmake libso`. Esperar a que termine. Listo, ya se puede usar la condición `rampAngularOscillatingDisplacement` en cualquier case de OpenFOAM.
 
+### Arranque
+
+Si se quiere arranque "suave" (aumentos progresivos de amplitud y frecuencia entre 0 y 1 segundo), comentar la línea 154 de `uboun.f` y dejar sin comentar las líneas 148 a 152. 
+
+Para un arranque con amplitud y frecuencia "nominales" de una, comentar las líneas 148 a 152 y descomentar la 154 de `uboun.f`. Cambiar la condición de contorno del patch `cylinder` de `rampAngularOscillatingDisplacement` a `angularOscillatingDisplacement` en `0/pointDisplacement`.
+
 ## Distintas frecuencias de pitching
 
 Para ajustar la frecuencia hay que modificar en dos lugares:
