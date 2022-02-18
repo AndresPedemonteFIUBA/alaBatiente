@@ -15,73 +15,80 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-10
+11
 (
     inlet
     {
         type            patch;
         nFaces          110;
-        startFace       67928;
+        startFace       67690;
     }
     outlet
     {
         type            patch;
-        nFaces          122;
-        startFace       68038;
+        nFaces          120;
+        startFace       67800;
     }
     top
     {
         type            patch;
-        nFaces          280;
-        startFace       68160;
+        nFaces          281;
+        startFace       67920;
     }
     bottom
     {
         type            patch;
-        nFaces          280;
-        startFace       68440;
+        nFaces          281;
+        startFace       68201;
     }
     flapTop
     {
         type            wall;
         inGroups        List<word> 1(wall);
         nFaces          130;
-        startFace       68720;
+        startFace       68482;
     }
     flapBottom
     {
         type            wall;
         inGroups        List<word> 1(wall);
         nFaces          130;
-        startFace       68850;
+        startFace       68612;
     }
     flapSide
     {
         type            wall;
         inGroups        List<word> 1(wall);
-        nFaces          2;
-        startFace       68980;
+        nFaces          1;
+        startFace       68742;
     }
     cylinder
     {
         type            wall;
         inGroups        List<word> 1(wall);
         nFaces          50;
-        startFace       68982;
+        startFace       68743;
     }
     front
     {
         type            empty;
         inGroups        List<word> 1(empty);
-        nFaces          34240;
-        startFace       69032;
+        nFaces          34121;
+        startFace       68793;
     }
     back
     {
         type            empty;
         inGroups        List<word> 1(empty);
-        nFaces          34240;
-        startFace       103272;
+        nFaces          34121;
+        startFace       102914;
+    }
+    defaultFaces
+    {
+        type            empty;
+        inGroups        List<word> 1(empty);
+        nFaces          0;
+        startFace       137035;
     }
 )
 

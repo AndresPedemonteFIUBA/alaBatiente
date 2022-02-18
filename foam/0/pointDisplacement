@@ -1,3 +1,4 @@
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 FoamFile
 {
     version     2.0;
@@ -27,12 +28,12 @@ boundaryField
 
     cylinder
     {
-        type           angularOscillatingDisplacement;
+        type           rampAngularOscillatingDisplacement;
 	axis		(0 0 1);
 	origin		(0.03 0.03 0);
 	angle0		0;
 	amplitude	0.1745329;
-	omega		75.55279004;
+	omega		113.3291851;
         value          uniform (0 0 0);
     }
     flapTop
@@ -53,14 +54,15 @@ boundaryField
     
     top
     {
-        type            slip;
+        type            fixedValue;
+        value           uniform (0 0 0);
     }
 
     bottom
     {
-        type            slip;
+        type            fixedValue;
+        value           uniform (0 0 0);
     }
-    
     back
     {
         type            empty;

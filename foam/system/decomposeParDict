@@ -12,6 +12,7 @@ FoamFile
     numberOfSubdomains 4;
     method scotch;
     
+    /*
     constraints
     {
         singleProcessorFaceSets
@@ -31,6 +32,7 @@ FoamFile
            			    );
        }
     }
+    */
     
     distributed false;
     roots
