@@ -4,7 +4,9 @@
 
 Actualmente:
 * `main` branch -> malla hecha con snappy (podría mejorarse un poco; quizás necesitas algunos puntos más en la capa límite).
-* `conBlockMesh` branch -> malla hecha a manopla con blockMesh. En algunas partes es medio lío el archivo. Habría que limpiarlo un poquito, definir variables y comentar.
+* `conBlockMesh` branch -> malla hecha a manopla con blockMesh. blockMeshDict paramétrico. Podría limpiarse un poco.
+
+Dentro de poco, imagen de cómo está construida la malla con blockMesh.
 
 ## Condiciones de contorno personalizadas
 
