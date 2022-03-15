@@ -1,0 +1,95 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       polyBoundaryMesh;
+    location    "constant/polyMesh";
+    object      boundary;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+11
+(
+    inlet
+    {
+        type            patch;
+        nFaces          110;
+        startFace       67690;
+    }
+    outlet
+    {
+        type            patch;
+        nFaces          120;
+        startFace       67800;
+    }
+    top
+    {
+        type            patch;
+        nFaces          281;
+        startFace       67920;
+    }
+    bottom
+    {
+        type            patch;
+        nFaces          281;
+        startFace       68201;
+    }
+    flapTop
+    {
+        type            wall;
+        inGroups        List<word> 1(wall);
+        nFaces          130;
+        startFace       68482;
+    }
+    flapBottom
+    {
+        type            wall;
+        inGroups        List<word> 1(wall);
+        nFaces          130;
+        startFace       68612;
+    }
+    flapSide
+    {
+        type            wall;
+        inGroups        List<word> 1(wall);
+        nFaces          1;
+        startFace       68742;
+    }
+    cylinder
+    {
+        type            wall;
+        inGroups        List<word> 1(wall);
+        nFaces          50;
+        startFace       68743;
+    }
+    front
+    {
+        type            empty;
+        inGroups        List<word> 1(empty);
+        nFaces          34121;
+        startFace       68793;
+    }
+    back
+    {
+        type            empty;
+        inGroups        List<word> 1(empty);
+        nFaces          34121;
+        startFace       102914;
+    }
+    defaultFaces
+    {
+        type            empty;
+        inGroups        List<word> 1(empty);
+        nFaces          0;
+        startFace       137035;
+    }
+)
+
+// ************************************************************************* //
