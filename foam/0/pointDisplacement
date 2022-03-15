@@ -8,6 +8,9 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
+f	18;
+omeg #calc "2*degToRad(180)*$f";
+
 dimensions      [0 1 0 0 0 0 0];
 
 internalField   uniform (0 0 0);
@@ -28,12 +31,12 @@ boundaryField
 
     cylinder
     {
-        type           rampAngularOscillatingDisplacement;
+        type           angularOscillatingDisplacement;
 	axis		(0 0 1);
 	origin		(0.03 0.03 0);
 	angle0		0;
 	amplitude	0.1745329;
-	omega		113.3291851;
+	omega		$omeg;
         value          uniform (0 0 0);
     }
     flapTop
