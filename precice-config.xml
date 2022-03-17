@@ -92,12 +92,12 @@
       <use-mesh name="Solid-Mesh-Side" from="Solid"/>
       <read-data name="Displacement-Side" mesh="Fluid-Mesh-Nodes-Side" />
       <write-data name="Force-Side" mesh="Fluid-Mesh-Centers-Side" />
-       <mapping:nearest-neighbor
+       <mapping:rbf-thin-plate-splines
         direction="write"
         from="Fluid-Mesh-Centers-Side"
         to="Solid-Mesh-Side"
         constraint="conservative" />
-       <mapping:nearest-neighbor
+       <mapping:rbf-thin-plate-splines
         direction="read"
         from="Solid-Mesh-Side"
         to="Fluid-Mesh-Nodes-Side"
