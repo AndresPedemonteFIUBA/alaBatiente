@@ -1,3 +1,7 @@
+0. Introducir la velocidad en el inlet en simpleFoam/0/U para tener la U_R deseada. Correr `simpleFoam`, tomar `U`, `p` y `phi` de la última iteración 
+de simpleFoam y colocarlas en fluid/0/.
+
+
 1. Corrida con lo que está:
 	ccx_preCICE -i ala -precice-participant Solid | tee log-CalculiX.txt
 	decomposePar -force
