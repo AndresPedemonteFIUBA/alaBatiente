@@ -18,6 +18,7 @@ de simpleFoam y colocarlas en fluid/0/.
 
 4. Cambiar controlDict en fluid2/system/:
 	startFrom ---> latestTime
+	deltaT -----> nuevo paso temporal.
 	
 5. Cambiar preciceDict en fluid2/system/:
 	preciceConfig "../precice-config.xml"; ---> preciceConfig "../precice-config2.xml";
