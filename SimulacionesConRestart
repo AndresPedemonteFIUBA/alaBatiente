@@ -1,0 +1,50 @@
+1. Corrida con lo que está:
+	ccx_preCICE -i ala -precice-participant Solid | tee log-CalculiX.txt
+	decomposePar -force
+	mpirun -np X pimpleFoam -parallel | tee logOF.txt
+	
+2. Copiar precice-config.xml a precice-config2.xml en el directorio base del caso:
+	- Cambiar <time-window-size value="X" /> al step de tiempo deseado.
+	- Cambiar <max-time value="Y" /> donde la simulación va desde latestTime hasta latestTime + Y en el "paso 2". 
+	- A todos los exchange data hay que aregarles initialize="1".
+
+2.5. Correr reconstructPar -time latestTime en directorio fluid
+	
+3. Copiar carpetas 0/constat/system/X (X=ultimo tiempo) fluid a fluid2
+
+4. Cambiar controlDict en fluid2/system/:
+	startFrom ---> latestTime
+	
+5. Cambiar preciceDict en fluid2/system/:
+	preciceConfig "../precice-config.xml"; ---> preciceConfig "../precice-config2.xml";
+	
+6. Copiar desde solid a solid2:
+   +ala.inp
+   +ala.rout
+   +clean.sh
+   +config.yml
+   +interfaceBottom.nam
+   +interface...
+   +interfaceTop.nam
+   +malla.msh
+   +run.sh
+
+7. Cambiar el nombre de ala.rout a ala2.rin
+
+8. Renombar ala.inp en solid2 a ala2.inp
+
+9. Borrar desde la linea *INCLUDE hasta *STEP (dejar *STEP). Agregar al principio del archivo *RESTART, READ
+
+10. Debajo de *DYNAMIC, DIRECT cambiar los numeros:
+    +Primer numero >>  nuevo paso de tiempo (delta t)
+    +Segundo numero >> tiempo que dura la simulacion "2" (tiene que ser igual a Y)
+    
+11. Cambiar en config.yml en solid2:
+	precice-config-file: ../precice-config.xml ----> precice-config-file: ../precice-config2.xml
+	
+12. Correr con:
+	ccx_preCICE -i ala2 -precice-participant Solid | tee log-CalculiX.txt
+	decomposePar -force
+	mpirun -np X pimpleFoam -parallel | tee logOF.txt
+	
+13. Repetir las veces que se quiera, cambiando 2 por n.
