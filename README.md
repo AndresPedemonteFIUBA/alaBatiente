@@ -3,8 +3,7 @@
 ## Ramas
 
 Actualmente:
-* `main` branch -> malla hecha con snappy (podría mejorarse un poco; quizás necesitas algunos puntos más en la capa límite).
-* `conBlockMesh` branch -> malla hecha a manopla con blockMesh. blockMeshDict paramétrico. Podría limpiarse un poco.
+* `conBlockMesh` branch -> malla hecha a manopla con blockMesh. blockMeshDict paramétrico.
 
 Dentro de poco, imagen de cómo está construida la malla con blockMesh.
 
@@ -18,19 +17,12 @@ Compilar el adaptador de CalculiX reemplazando el archivo `uboun.f` del código 
 
 Llevar la carpeta `custom-OF-BC` a, por ejemplo, `$FOAM_RUN`. En la carpeta, abrir la terminal y escribir `wmake libso`. Esperar a que termine. Listo, ya se puede usar la condición `rampAngularOscillatingDisplacement` en cualquier case de OpenFOAM.
 
-### Arranque
-
-Si se quiere arranque "suave" (aumentos progresivos de amplitud y frecuencia entre 0 y 1 segundo), comentar la línea 154 de `uboun.f` y dejar sin comentar las líneas 148 a 152. 
-
-Para un arranque con amplitud y frecuencia "nominales" de una, comentar las líneas 148 a 152 y descomentar la 154 de `uboun.f`. Cambiar la condición de contorno del patch `cylinder` de `rampAngularOscillatingDisplacement` a `angularOscillatingDisplacement` en `0/pointDisplacement`.
-
 ## Distintas frecuencias de pitching
 
 Para ajustar la frecuencia hay que modificar en dos lugares:
 
-* En FOAM, en el archivo `pointDisplacement` en la carpeta `0` hay que modificar el valor de `omega`. Va en radianes.
-* Al cambiar la frecuencia hay que recompilar CalculiX. Hay que ir a la fuente de CCX y modificar la variable `omega` en el archivo `uboun.f`; después recompilar `ccx_precice`.
-
+* En FOAM, en el archivo `pointDisplacement` en la carpeta `0` hay que modificar el valor de `f`. Va en hertz.
+* En ala.inp, cambiar el primer número en la línea siguiente a `*CONDUCTIVITY`. Va en hertz y debe ser el mismo valor que el especificado en `pointDisplacement`.
 ## ¿Problemas al compilar?
 
 Si tenés Anaconda, usar `conda deactivate` antes de compilar los programas.
