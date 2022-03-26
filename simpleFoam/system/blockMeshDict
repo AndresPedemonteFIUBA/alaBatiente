@@ -53,21 +53,12 @@ x12 #calc "0.03+$radioVarilla*cos($ang12)";
 x13 #calc "0.03+$radioVarilla*cos($ang13)";
 x14 #calc "$x15";
 x19 #calc "$x18";
-//x22 #calc "0.03+$radioVarilla+$largoAla-$espesorAla/2.0";
 x22 #calc "0.03+$radioVarilla+$largoAla";
 y22 #calc "0.03-$espesorAla/2.0";
-//x23 #calc "0.03+$radioVarilla+$largoAla-$espesorAla/2.0";
 x23 #calc "0.03+$radioVarilla+$largoAla";
 y23 #calc "0.03+$espesorAla/2.0";
 altura #calc "$ySup-($yInf)";
 calAux #calc "sqrt(pow($altura,2)-pow($espesorAla/2.0,2))";
-/*
-xC  #calc "$calAux+0.03+$radioVarilla+$largoAla-($espesorAla/2.0)";
-x20 #calc "-(sqrt(pow($altura,2)-pow($yInf-0.03,2)))+$xC";
-x25 #calc "$x20";
-x21 #calc "-(sqrt(pow($altura,2)-pow($y15-0.03,2)))+$xC";
-x24 #calc "$x21";
-*/
 x20 #calc "$x22";
 x21 #calc "$x22";
 x24 #calc "$x23";
@@ -123,38 +114,38 @@ vertices
 ($xOutlet $y29 0) 			//Vertex 29
 ($xOutlet $y30 0)			//Vertex 30
 ($xOutlet $ySup 0)			//Vertex 31
-($xInlet $yInf 0.001)			//Vertex 32
-($xInlet $y1 0.001)		//Vertex 33
-($xInlet $y2 0.001)		//Vertex 34
-($xInlet $ySup 0.001)			//Vertex 35
-($x4 $yInf 0.001)			//Vertex 36
-($x5 $y5 0.001)			//Vertex 37		
-($x6 $y6 0.001)			//Vertex 38	
-($x7 $ySup 0.001)			//Vertex 39	
-($x8 $y8 0.001)			//Vertex 40
-($x9 $y9 0.001)			//Vertex 41
-($x10 $y10 0.001)		//Vertex 42
-($x11 $y11 0.001)		//Vertex 43
-($x12 $y12 0.001)			//Vertex 44
-($x13 $y13 0.001)			//Vertex 45
-($x14 $yInf 0.001)			//Vertex 46
-($x15 $y15 0.001)		//Vertex 47
-($x16 $y16 0.001)		//Vertex 48
-($x17 $y17 0.001)		//Vertex 49
-($x18 $y18 0.001)		//Vertex 50
-($x19 $ySup 0.001)		//Vertex 51
-($x20 $yInf 0.001)			//Vertex 52
-($x21 $y21 0.001)		//Vertex 53
-($x22 $y22 0.001)		//Vertex 54
-($x23 $y23 0.001) 		//Vertex 55
-($x24 $y24 0.001)		//Vertex 56
-($x25 $ySup 0.001)			//Vertex 57
-($xOutlet $yInf 0.001)			//Vertex 58
-($xOutlet $y27 0.001)		//Vertex 59
-($xOutlet $y28 0.001)		//Vertex 60
-($xOutlet $y29 0.001) 		//Vertex 61
-($xOutlet $y30 0.001)		//Vertex 62
-($xOutlet $ySup 0.001)			//Vertex 63
+($xInlet $yInf 0.160)			//Vertex 32
+($xInlet $y1 0.160)			//Vertex 33
+($xInlet $y2 0.160)			//Vertex 34
+($xInlet $ySup 0.160)			//Vertex 35
+($x4 $yInf 0.160)			//Vertex 36
+($x5 $y5 0.160)			//Vertex 37		
+($x6 $y6 0.160)			//Vertex 38	
+($x7 $ySup 0.160)			//Vertex 39	
+($x8 $y8 0.160)			//Vertex 40
+($x9 $y9 0.160)			//Vertex 41
+($x10 $y10 0.160)			//Vertex 42
+($x11 $y11 0.160)			//Vertex 43
+($x12 $y12 0.160)			//Vertex 44
+($x13 $y13 0.160)			//Vertex 45
+($x14 $yInf 0.160)			//Vertex 46
+($x15 $y15 0.160)			//Vertex 47
+($x16 $y16 0.160)			//Vertex 48
+($x17 $y17 0.160)			//Vertex 49
+($x18 $y18 0.160)			//Vertex 50
+($x19 $ySup 0.160)			//Vertex 51
+($x20 $yInf 0.160)			//Vertex 52
+($x21 $y21 0.160)			//Vertex 53
+($x22 $y22 0.160)			//Vertex 54
+($x23 $y23 0.160) 			//Vertex 55
+($x24 $y24 0.160)			//Vertex 56
+($x25 $ySup 0.160)			//Vertex 57
+($xOutlet $yInf 0.160)			//Vertex 58
+($xOutlet $y27 0.160)			//Vertex 59
+($xOutlet $y28 0.160)			//Vertex 60
+($xOutlet $y29 0.160) 			//Vertex 61
+($xOutlet $y30 0.160)			//Vertex 62
+($xOutlet $ySup 0.160)			//Vertex 63
 );
 
 // Parametros de refinamiento de malla.
@@ -236,11 +227,6 @@ blocks
 	hex (15 21 22 16 47 53 54 48) ($N10x $N8y 1) simpleGrading (1 $Gy8 1) // Bloque 11
 	hex (17 23 24 18 49 55 56 50) ($N10x $N8y 1) simpleGrading (1 $Gy9 1) // Bloque 12
 	hex (18 24 25 19 50 56 57 51) ($N10x $N2y 1) edgeGrading (1 1 1 1 $GyB2 $GyB2 $GyB2 $GyB2 1 1 1 1) // Bloque 13
-	/*
-	hex (22 21 24 23 54 53 56 55) ($N8y 180 1) edgeGrading ($Gy9 $Gy9 $Gy9 $Gy9 1 1 1 1 1 1 1 1)// Bloque 14
-	hex (21 20 25 24 53 52 57 56) ($N0y 180 1) edgeGrading ($GyB2 $GyB2 $GyB0 $GyB0 1 1 1 1 1 1 1 1) // Bloque 15
-	hex (20 26 31 25 52 58 63 57) ($Nxout 180 1) simpleGrading (1 1 1) // Bloque 16
-	*/
 	hex (20 26 27 21 52 58 59 53) ($Nxout $N0y 1) edgeGrading ($GxOutlet $GxOutlet $GxOutlet $GxOutlet $GyB0 $GyB0 $GyB0 $GyB0 1 1 1 1 )  // Bloque 14
 	hex (21 27 28 22 53 59 60 54) ($Nxout $N8y 1) edgeGrading ($GxOutlet $GxOutlet $GxOutlet $GxOutlet $Gy8 $Gy8 $Gy8 $Gy8 1 1 1 1) // Bloque 15
 	hex (22 28 29 23 54 60 61 55) ($Nxout $NyWake 1) simpleGrading ($GxOutlet 1 1) // Bloque 16
@@ -281,61 +267,32 @@ y1113 #calc "0.03 + $radioVarilla*sin(degToRad(40))";
 xCilInf 0.03;
 yCilInf #calc "0.03-$radioVarilla";
 
-/*
-x2223 #calc "0.03+$radioVarilla+$largoAla";
-y2223 0.03;
-
-x2021 #calc "-(sqrt(pow($altura,2)-pow(($yInf+$y15)/2.0-0.03,2)))+$xC";
-y2021 #calc "($yInf+$y15)/2.0";
-
-x2425 #calc "$x2021";
-y2425 #calc "($ySup+$y18)/2";
-
-centro2124 #calc "-sqrt(pow($y24-$y21,2)-pow($y24-0.03,2))+$x24";
-x2124 #calc "$centro2124+($y24-$y21)*cos(radToDeg(0.0))";
-y2124 0.03;
-*/
-
 edges
 (
 	arc 5 6 ($x56 $y56 0) 
-	arc 37 38 ($x56 $y56 0.001) 
+	arc 37 38 ($x56 $y56 0.160) 
 	arc 8 9 ($xCilIzq $yCilIzq 0) 
-	arc 40 41 ($xCilIzq $yCilIzq 0.001) 
+	arc 40 41 ($xCilIzq $yCilIzq 0.160) 
 
 	arc 8 10 ($xCilInf $yCilInf 0) 
-	arc 40 42 ($xCilInf $yCilInf 0.001) 
+	arc 40 42 ($xCilInf $yCilInf 0.160) 
 	arc 5 15 ($x515 $y515 0) 
-	arc 37 47 ($x515 $y515 0.001) 
+	arc 37 47 ($x515 $y515 0.160) 
 	
 	arc 9 11 ($x911 $y911 0) 
-	arc 41 43 ($x911 $y911 0.001) 
+	arc 41 43 ($x911 $y911 0.160) 
 	arc 6 18 ($x618 $y618 0) 
-	arc 38 50 ($x618 $y618 0.001) 
+	arc 38 50 ($x618 $y618 0.160) 
 	
 	arc 10 12 ($x1012 $y1012 0) 
-	arc 42 44 ($x1012 $y1012 0.001) 
+	arc 42 44 ($x1012 $y1012 0.160) 
 	arc 15 16 ($x1516 $y1516 0) 
-	arc 47 48 ($x1516 $y1516 0.001) 
+	arc 47 48 ($x1516 $y1516 0.160) 
 	
 	arc 13 11 ($x1113 $y1113 0) 
-	arc 45 43 ($x1113 $y1113 0.001) 
+	arc 45 43 ($x1113 $y1113 0.160) 
 	arc 17 18 ($x1718 $y1718 0) 
-	arc 49 50 ($x1718 $y1718 0.001) 
-	
-	/*
-	arc 22 23 ($x2223 $y2223 0)
-	arc 54 55 ($x2223 $y2223 0.001)
-	
-	arc 21 24 ($x2124 $y2124 0)
-	arc 53 56 ($x2124 $y2124 0.001)
-	
-	arc 21 20 ($x2021 $y2021 0)
-	arc 52 53 ($x2021 $y2021 0.001)
-	
-	arc 24 25 ($x2425 $y2425 0)
-	arc 56 57 ($x2425 $y2425 0.001)
-	*/
+	arc 49 50 ($x1718 $y1718 0.160) 
 );
 
 boundary
@@ -485,11 +442,6 @@ boundary
 			(22 23 29 28)
 			(23 24 30 29)
 			(24 25 31 30)
-			/*
-			(22 21 24 23)
-			(21 20 25 24)
-			(20 26 31 25)
-			*/
 		);
 	}
 

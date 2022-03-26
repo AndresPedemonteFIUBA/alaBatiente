@@ -20,68 +20,68 @@ FoamFile
     inlet
     {
         type            patch;
-        nFaces          62;
-        startFace       19066;
+        nFaces          124;
+        startFace       76358;
     }
     outlet
     {
         type            patch;
-        nFaces          70;
-        startFace       19128;
+        nFaces          138;
+        startFace       76482;
     }
     top
     {
         type            patch;
-        nFaces          138;
-        startFace       19198;
+        nFaces          276;
+        startFace       76620;
     }
     bottom
     {
         type            patch;
-        nFaces          138;
-        startFace       19336;
+        nFaces          276;
+        startFace       76896;
     }
     flapTop
     {
         type            wall;
         inGroups        List<word> 1(wall);
-        nFaces          60;
-        startFace       19474;
+        nFaces          120;
+        startFace       77172;
     }
     flapBottom
     {
         type            wall;
         inGroups        List<word> 1(wall);
-        nFaces          60;
-        startFace       19534;
+        nFaces          120;
+        startFace       77292;
     }
     flapSide
     {
         type            wall;
         inGroups        List<word> 1(wall);
         nFaces          2;
-        startFace       19594;
+        startFace       77412;
     }
     cylinder
     {
         type            wall;
         inGroups        List<word> 1(wall);
-        nFaces          42;
-        startFace       19596;
+        nFaces          84;
+        startFace       77414;
     }
     front
     {
         type            empty;
         inGroups        List<word> 1(empty);
-        nFaces          9676;
-        startFace       19638;
+        nFaces          38464;
+        startFace       77498;
     }
     back
     {
         type            empty;
         inGroups        List<word> 1(empty);
-        nFaces          9676;
-        startFace       29314;
+        nFaces          38464;
+        startFace       115962;
     }
 )
 
