@@ -17,6 +17,8 @@ Compilar el adaptador de CalculiX reemplazando el archivo `uboun.f` del código 
 
 Llevar la carpeta `custom-OF-BC` a, por ejemplo, `$FOAM_RUN`. En la carpeta, abrir la terminal y escribir `wmake libso`. Esperar a que termine. Listo, ya se puede usar la condición `rampAngularOscillatingDisplacement` en cualquier case de OpenFOAM.
 
+Para usar los 8 núcleos de la compu del labo: `mpirun --use-hwthread-cpus ...`
+
 ## Distintas frecuencias de pitching
 
 Para ajustar la frecuencia hay que modificar en dos lugares:
