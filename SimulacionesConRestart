@@ -22,6 +22,7 @@ de simpleFoam y colocarlas en fluid/0/.
 	
 5. Cambiar preciceDict en fluid2/system/:
 	preciceConfig "../precice-config.xml"; ---> preciceConfig "../precice-config2.xml";
+	! Eliminar todas las instancias de y-dead=true en precice-config2.xml (son 4)
 	
 6. Copiar desde solid a solid2:
    +ala.inp
