@@ -13,9 +13,8 @@ Description
 
 #includeEtc "caseDicts/postProcessing/forces/forcesIncompressible.cfg"
 
-rho	    	rhoInf;
-rhoInf      	1.205;    // Fluid density
-patches     	(flapTop flapBottom flapSide);
+rhoInf      1.205;    // Fluid density
+patches     (flapTop flapSide flapBottom);
 
 CofR        (0.03 0.03 0.5);
 pitchAxis   (0 0 1);

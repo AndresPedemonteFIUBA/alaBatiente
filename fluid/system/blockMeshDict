@@ -20,7 +20,6 @@ espesorAla 0.00005; //Espesor del ala
 
 //Grado de refinamiento deseado (0 a 2):
 n		2;
-// !!! No olvidar correr la utility extrudeMesh luego de blockMesh !!!
 
 // De acá en adelante, no toquetear.
 
@@ -66,7 +65,7 @@ x25 #calc "$x23";
 y21 #calc "$y15";
 y24 #calc "$y18";
 y27 #calc "$y21";
-y28 #calc "$y22";
+y28 0.03;
 y29 #calc "$y23";
 y30 #calc "$y24";
 
@@ -115,8 +114,8 @@ vertices
 ($xOutlet $y30 0)			//Vertex 30
 ($xOutlet $ySup 0)			//Vertex 31
 ($xInlet $yInf 0.160)			//Vertex 32
-($xInlet $y1 0.160)			//Vertex 33
-($xInlet $y2 0.160)			//Vertex 34
+($xInlet $y1 0.160)		        //Vertex 33
+($xInlet $y2 0.160)		        //Vertex 34
 ($xInlet $ySup 0.160)			//Vertex 35
 ($x4 $yInf 0.160)			//Vertex 36
 ($x5 $y5 0.160)			//Vertex 37		
@@ -146,22 +145,31 @@ vertices
 ($xOutlet $y29 0.160) 			//Vertex 61
 ($xOutlet $y30 0.160)			//Vertex 62
 ($xOutlet $ySup 0.160)			//Vertex 63
+(0.0663 $yInf 0)			//Vertex 64
+(0.0663 $y21 0)			//Vertex 65
+(0.0663 0.03 0)			//Vertex 66
+(0.0663 $y24 0)			//Vertex 67
+(0.0663 $ySup 0) 			//Vertex 68
+(0.0663 $yInf 0.160)			//Vertex 69
+(0.0663 $y21 0.160)			//Vertex 70
+(0.0663 0.03 0.160)			//Vertex 71
+(0.0663 $y24 0.160)			//Vertex 72
+(0.0663 $ySup 0.160)			//Vertex 73
 );
 
 // Parametros de refinamiento de malla.
 
-
 N0x #calc "pow(2.0,$n)*10"; // Cantidad de celdas en la dirección x en el bloque 0.
-N0y #calc "pow(2.0,$n)*13"; // Cantidad de celdas en la dirección y en el bloque 0.
+N0y #calc "pow(2.0,$n)*12"; // Cantidad de celdas en la dirección y en el bloque 0.
 
 // N1x = N0x // Cantidad de celdas en la dirección x en el bloque 1. Igual a N0x.
-N1y #calc "pow(2.0,$n)*5"; // Cantidad de celdas en la dirección y en el bloque 1.
+N1y #calc "pow(2.0,$n)*3"; // Cantidad de celdas en la dirección y en el bloque 1.
 
 // N2x = N0x // Cantidad de celdas en la dirección x en el bloque 2. Igual a N0x.
-N2y #calc "pow(2.0,$n)*13"; // Cantidad de celdas en la dirección y en el bloque 2.
+N2y #calc"pow(2.0,$n)*12"; // Cantidad de celdas en la dirección y en el bloque 2.
 
 //N3y = N0y / Cantidad de celdas en la dirección y en el bloque 3. Igual a N0y.
-N3x #calc "pow(2.0,$n)*4"; // Cantidad de celdas en la dirección x en el bloque 3.
+N3x #calc"pow(2.0,$n)*4"; // Cantidad de celdas en la dirección x en el bloque 3.
 
 //N4x = N3x
 Nr #calc "pow(2.0,$n)*5"; // Cantidad de celdas en la dirección radial de los bloques 4 5 6.
@@ -206,8 +214,8 @@ GxB2 #calc "$GxB0"; //Igual a GxB0.
 GyB0 0.2; // Gradiente de tamaño de las celdas en la dirección y para los bloques 0, 3, 10 y 14.
 GyB2 5; //Reciproco de GyB0.
 
-Gy8 0.4; //
-Gy9 2.5; // 
+Gy8 0.5; //
+Gy9 2; // 
 
 suma #calc "$N0y+$N2y";
 
@@ -227,11 +235,16 @@ blocks
 	hex (15 21 22 16 47 53 54 48) ($N10x $N8y 1) simpleGrading (1 $Gy8 1) // Bloque 11
 	hex (17 23 24 18 49 55 56 50) ($N10x $N8y 1) simpleGrading (1 $Gy9 1) // Bloque 12
 	hex (18 24 25 19 50 56 57 51) ($N10x $N2y 1) edgeGrading (1 1 1 1 $GyB2 $GyB2 $GyB2 $GyB2 1 1 1 1) // Bloque 13
-	hex (20 26 27 21 52 58 59 53) ($Nxout $N0y 1) edgeGrading ($GxOutlet $GxOutlet $GxOutlet $GxOutlet $GyB0 $GyB0 $GyB0 $GyB0 1 1 1 1 )  // Bloque 14
-	hex (21 27 28 22 53 59 60 54) ($Nxout $N8y 1) edgeGrading ($GxOutlet $GxOutlet $GxOutlet $GxOutlet $Gy8 $Gy8 $Gy8 $Gy8 1 1 1 1) // Bloque 15
-	hex (22 28 29 23 54 60 61 55) ($Nxout $NyWake 1) simpleGrading ($GxOutlet 1 1) // Bloque 16
-	hex (23 29 30 24 55 61 62 56) ($Nxout $N8y 1) edgeGrading ($GxOutlet $GxOutlet $GxOutlet $GxOutlet $Gy9 $Gy9 $Gy9 $Gy9 1 1 1 1) // Bloque 17
-	hex (24 30 31 25 56 62 63 57) ($Nxout $N2y 1) edgeGrading ($GxOutlet $GxOutlet $GxOutlet $GxOutlet $GyB2 $GyB2 $GyB2 $GyB2 1 1 1 1 ) // Bloque 18
+	hex (20 64 65 21 52 69 70 53) (1 $N0y 1) simpleGrading (1 $GyB0 1) // Bloque 14
+	hex (21 65 66 22 53 70 71 54) (1 $N8y 1) simpleGrading (1 $Gy8 1) // Bloque 15
+	hex (22 66 66 23 54 71 71 55) (1 2 1) simpleGrading (1 1 1) // Bloque 16
+	hex (23 66 67 24 55 71 72 56) (1 $N8y 1) simpleGrading (1 $Gy9 1) // Bloque 17
+	hex (24 67 68 25 56 72 73 57) (1 $N2y 1) simpleGrading (1 $GyB2 1) // Bloque 18
+	hex (64 26 27 65 69 58 59 70) ($Nxout $N0y 1) edgeGrading ($GxOutlet $GxOutlet $GxOutlet $GxOutlet $GyB0 $GyB0 $GyB0 $GyB0 1 1 1 1 )  // Bloque 19
+	hex (65 27 28 66 70 59 60 71) ($Nxout $N8y 1) edgeGrading ($GxOutlet $GxOutlet $GxOutlet $GxOutlet $Gy8 $Gy8 $Gy8 $Gy8 1 1 1 1) // Bloque 20
+	hex (66 28 30 67 71 60 62 72) ($Nxout $N8y 1) edgeGrading ($GxOutlet $GxOutlet $GxOutlet $GxOutlet $Gy9 $Gy9 $Gy9 $Gy9 1 1 1 1) // Bloque 21
+	hex (67 30 31 68 72 62 63 73) ($Nxout $N2y 1) edgeGrading ($GxOutlet $GxOutlet $GxOutlet $GxOutlet $GyB2 $GyB2 $GyB2 $GyB2 1 1 1 1 ) // Bloque 22
+	
 );
 
 
@@ -263,7 +276,6 @@ y1012 #calc "0.03 + $radioVarilla*sin(degToRad(320))";
 x1113 #calc "0.03 + $radioVarilla*cos(degToRad(40))";
 y1113 #calc "0.03 + $radioVarilla*sin(degToRad(40))";
 
-
 xCilInf 0.03;
 yCilInf #calc "0.03-$radioVarilla";
 
@@ -293,6 +305,7 @@ edges
 	arc 45 43 ($x1113 $y1113 0.160) 
 	arc 17 18 ($x1718 $y1718 0) 
 	arc 49 50 ($x1718 $y1718 0.160) 
+
 );
 
 boundary
@@ -315,8 +328,7 @@ boundary
 		(
 			(26 27 59 58)
 			(27 28 60 59)
-			(28 29 61 60)
-			(29 30 62 61)
+			(28 30 62 60)
 			(30 31 63 62)
 		);
 	}
@@ -329,7 +341,8 @@ boundary
 			(3 35 39 7)
 			(7 39 51 19)
 			(19 51 57 25)
-			(25 57 63 31)
+			(25 57 73 68)
+			(68 73 63 31)
 		);
 	}
 	
@@ -341,7 +354,8 @@ boundary
 			(4 36 32 0)
 			(14 46 36 4)
 			(20 52 46 14)
-			(26 58 52 20)
+			(64 69 52 20)
+			(26 58 69 64)
 		);
 	}
 	
@@ -406,16 +420,15 @@ boundary
 			(48 47 53 54)
 			(50 49 55 56)
 			(51 50 56 57)
-			(53 52 58 59)
-			(54 53 59 60)
-			(55 54 60 61)
-			(56 55 61 62)
-			(57 56 62 63)
-			/*
-			(53 54 55 56)
-			(52 53 56 57)
-			(58 52 57 63)
-			*/
+			(53 52 69 70)
+			(54 53 70 71)
+			(55 54 71 71)
+			(56 55 71 72)
+			(57 56 72 73)
+			(70 69 58 59)
+			(71 70 59 60)
+			(72 71 60 62)
+			(73 72 62 63)
 		);
 	}
 	back
@@ -437,14 +450,17 @@ boundary
 			(15 16 22 21)
 			(17 18 24 23)
 			(18 19 25 24)
-			(20 21 27 26)
-			(21 22 28 27)
-			(22 23 29 28)
-			(23 24 30 29)
-			(24 25 31 30)
+			(21 65 64 20)
+			(22 66 65 21)
+			(23 66 66 22)
+			(24 67 66 23)
+			(25 68 67 24)
+			(65 27 26 64)
+			(66 28 27 65)
+			(67 30 28 66)
+			(68 31 30 67) 
 		);
 	}
-
 );
 
 mergePatchPairs

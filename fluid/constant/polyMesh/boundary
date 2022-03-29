@@ -8,80 +8,87 @@
 FoamFile
 {
     version     2.0;
-    format      binary;
+    format      ascii;
     class       polyBoundaryMesh;
     location    "constant/polyMesh";
     object      boundary;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-10
+11
 (
     inlet
     {
         type            patch;
-        nFaces          124;
-        startFace       76358;
+        nFaces          108;
+        startFace       70777;
     }
     outlet
     {
         type            patch;
-        nFaces          138;
-        startFace       76482;
+        nFaces          128;
+        startFace       70885;
     }
     top
     {
         type            patch;
-        nFaces          276;
-        startFace       76620;
+        nFaces          277;
+        startFace       71013;
     }
     bottom
     {
         type            patch;
-        nFaces          276;
-        startFace       76896;
+        nFaces          277;
+        startFace       71290;
     }
     flapTop
     {
         type            wall;
         inGroups        List<word> 1(wall);
         nFaces          120;
-        startFace       77172;
+        startFace       71567;
     }
     flapBottom
     {
         type            wall;
         inGroups        List<word> 1(wall);
         nFaces          120;
-        startFace       77292;
+        startFace       71687;
     }
     flapSide
     {
         type            wall;
         inGroups        List<word> 1(wall);
         nFaces          2;
-        startFace       77412;
+        startFace       71807;
     }
     cylinder
     {
         type            wall;
         inGroups        List<word> 1(wall);
-        nFaces          84;
-        startFace       77414;
+        nFaces          76;
+        startFace       71809;
     }
     front
     {
         type            empty;
         inGroups        List<word> 1(empty);
-        nFaces          38464;
-        startFace       77498;
+        nFaces          35666;
+        startFace       71885;
     }
     back
     {
         type            empty;
         inGroups        List<word> 1(empty);
-        nFaces          38464;
-        startFace       115962;
+        nFaces          35666;
+        startFace       107551;
+    }
+    defaultFaces
+    {
+        type            empty;
+        inGroups        List<word> 1(empty);
+        nFaces          0;
+        startFace       143217;
     }
 )
 
