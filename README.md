@@ -29,6 +29,8 @@ En la carpeta `fluid/system` ya están los archivos necesarios para correr:
 y
 `pimpleFoam -postProcess -func forceCoeffsIncompressible [-time a:b]` (coeficientes de fuerzas)
 
+Para juntar archivos `forceCoeffs_*.dat` usar `head -9 forceCoeffs.dat > forceCoefficients.dat && tail -n +10 -q forceCoeff*.dat >> forceCoefficients.dat`
+
 
 ## Distintas frecuencias de pitching
 
