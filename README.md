@@ -31,7 +31,6 @@ y
 
 Para juntar archivos `forceCoeffs_*.dat` usar `head -9 forceCoeffs.dat > forceCoefficients.dat && tail -n +10 -q forceCoeff*.dat >> forceCoefficients.dat`
 
-
 ## Distintas frecuencias de pitching
 
 Para ajustar la frecuencia hay que modificar en dos lugares:
@@ -48,3 +47,26 @@ https://github.com/precice/openfoam-adapter/pull/203
 ## Utilidades
 
 En la carpeta utilidades hay un archivo para habilitar el syntax highlighting para el formato de los archivos de CalculiX en `gedit`. Hay que colocarlo en `usr/share/gtksourceview-4/language-specs`. Se puede habilitar (en el gedit) también para cualquier otro formato de archivo (`.nam`, `.msh`).
+
+## Videos
+
+
+
+
+
+| Frecuencia de forzado | Video                                                                                                 |
+|-----------------------|-------------------------------------------------------------------------------------------------------|
+|    10 Hz              | https://user-images.githubusercontent.com/67233283/162450629-338a0054-5fb6-4418-9409-78406615b3ab.mp4 |
+|-----------------------|-------------------------------------------------------------------------------------------------------|
+|    12 Hz              | https://user-images.githubusercontent.com/67233283/162450802-1edf8ea3-df82-408d-a870-a89cb404e90c.mp4 |
+|-----------------------|-------------------------------------------------------------------------------------------------------|
+|    14 Hz              | https://user-images.githubusercontent.com/67233283/162450892-e684f0d0-e2f9-4bce-8406-9ca54a04c924.mp4 |
+|-----------------------|-------------------------------------------------------------------------------------------------------|
+|    16 Hz              |                                                                                                       |
+|-----------------------|-------------------------------------------------------------------------------------------------------|
+|    18 Hz              |                                                                                                       |
+|-----------------------|-------------------------------------------------------------------------------------------------------|
+|    20 Hz              | https://user-images.githubusercontent.com/67233283/162451126-128a5b93-1687-4bc5-92d5-624a8ff0ae4e.mp4 |
+|-----------------------|-------------------------------------------------------------------------------------------------------|
+
+
