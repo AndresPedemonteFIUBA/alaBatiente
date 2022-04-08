@@ -56,12 +56,27 @@ En la carpeta utilidades hay un archivo para habilitar el syntax highlighting pa
 
 | Frecuencia de forzado | Video                                                                                                 |
 |-----------------------|-------------------------------------------------------------------------------------------------------|
-|    10 Hz              | https://user-images.githubusercontent.com/67233283/162452256-7c5d8e72-303a-4793-ba59-66215ee5d2f1.mov |
-|    12 Hz              | https://user-images.githubusercontent.com/67233283/162452500-f23c7163-e348-44ef-b5c1-e1ad0fa5fe79.mov |
-|    14 Hz              | https://user-images.githubusercontent.com/67233283/162452369-f6399ac4-862f-40d6-b544-d69fc39a5889.mov |
+|    10 Hz              | https://user-images.githubusercontent.com/67233283/162453515-03274e56-1c2f-47b5-95a1-0bc251a5c16c.mov |
+|    12 Hz              | https://user-images.githubusercontent.com/67233283/162453566-0398ecd6-8ead-4d7a-8c01-a2d74bdc84b5.mov |
+|    14 Hz              | https://user-images.githubusercontent.com/67233283/162453596-0d6e87ed-2578-400e-8585-56752d2e3849.mov |
 |    16 Hz              |                                                                                                       |
 |    18 Hz              |                                                                                                       |
-|    20 Hz              | https://user-images.githubusercontent.com/67233283/162452426-6e695f05-74aa-4166-a92c-86747a45a5bf.mov |
+|    20 Hz              | https://user-images.githubusercontent.com/67233283/162453488-cc34b332-35f6-45a2-8a25-803692f98807.mov |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
