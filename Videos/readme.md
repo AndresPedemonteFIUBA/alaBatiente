@@ -7,7 +7,7 @@
 |     8 Hz              | <video src='https://user-images.githubusercontent.com/67233283/164772403-3b094bce-6ae2-4c94-ad3b-f17c6623d92f.mp4' width=180/> |
 |    10 Hz              | <video src='https://user-images.githubusercontent.com/67233283/164772506-0a7d8633-cc30-4a34-9b2f-c7eddad7dc61.mp4' width=180/> |
 |    12 Hz              | <video src='https://user-images.githubusercontent.com/67233283/164772560-38b610c9-453a-44de-a3a7-3d5be995b9d7.mp4' width=180/> |
-|    14 Hz              | <video src='https://user-images.githubusercontent.com/67233283/162472047-ed7e620e-0529-4d04-880a-04d73dbbcae3.mp4]' width=180/>|
+|    14 Hz              | <video src='https://user-images.githubusercontent.com/67233283/164772996-57003465-3b32-484e-b12f-260198598f8e.mp4' width=180/>|
 |    16 Hz              |                                                                                                       |
 |    18 Hz              |                                                                                                       |
 |    20 Hz              | <video src='https://user-images.githubusercontent.com/67233283/162472093-9bddcab7-64e5-43b3-b411-04ad9f88dbd3.mp4]' width=180/>|
