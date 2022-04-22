@@ -10,7 +10,7 @@
 |    14 Hz              | <video src='https://user-images.githubusercontent.com/67233283/164772996-57003465-3b32-484e-b12f-260198598f8e.mp4' width=180/> |
 |    16 Hz              |                                                                                                       |
 |    18 Hz              | <video src='https://user-images.githubusercontent.com/67233283/164774538-dd8722ae-0944-4873-9fae-6cd349bfa199.mp4' width=180/> |
-|    20 Hz              | <video src='https://user-images.githubusercontent.com/67233283/162472093-9bddcab7-64e5-43b3-b411-04ad9f88dbd3.mp4' width=180/>|
+|    20 Hz              | <video src='https://user-images.githubusercontent.com/67233283/164777451-64ffeee3-beb8-4635-92f1-112a91d726fe.mp4' width=180/>|
 
 ## UR=0,54
 
