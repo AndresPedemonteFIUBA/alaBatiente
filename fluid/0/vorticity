@@ -67,6 +67,10 @@ boundaryField
     {
         type            empty;
     }
+    defaultFaces
+    {
+        type            empty;
+    }
 }
 
 

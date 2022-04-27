@@ -1,3 +1,10 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
 FoamFile
 {
     version     2.0;
@@ -14,12 +21,26 @@ internalField   uniform (0 0 0);
 
 boundaryField
 {
-    cylinder
+    inlet
     {
         type            calculated;
         value           uniform (0 0 0);
     }
-    
+    outlet
+    {
+        type            calculated;
+        value           uniform (0 0 0);
+    }
+    top
+    {
+        type            calculated;
+        value           uniform (0 0 0);
+    }
+    bottom
+    {
+        type            calculated;
+        value           uniform (0 0 0);
+    }
     flapTop
     {
         type            calculated;
@@ -35,35 +56,20 @@ boundaryField
         type            calculated;
         value           uniform (0 0 0);
     }
-
-    inlet
+    cylinder
     {
         type            calculated;
         value           uniform (0 0 0);
     }
-
-    outlet
+    front
     {
-        type            calculated;
-        value           uniform (0 0 0);
-    }
-
-    top
-    {
-        type            calculated;
-        value           uniform (0 0 0);
-    }
-
-    bottom
-    {
-        type            calculated;
-        value           uniform (0 0 0);
+        type            empty;
     }
     back
     {
         type            empty;
     }
-    front
+    defaultFaces
     {
         type            empty;
     }

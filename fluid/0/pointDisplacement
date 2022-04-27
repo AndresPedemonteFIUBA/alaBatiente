@@ -57,18 +57,24 @@ boundaryField
     
     top
     {
-        type            slip;
+        type            fixedValue;
+        value           uniform (0 0 0);
     }
 
     bottom
     {
-        type            slip;
+        type            fixedValue;
+        value           uniform (0 0 0);
     }
     back
     {
         type            empty;
     }
     front
+    {
+        type            empty;
+    }
+    defaultFaces
     {
         type            empty;
     }

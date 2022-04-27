@@ -1,3 +1,4 @@
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 FoamFile
 {
     version     2.0;
@@ -27,13 +28,8 @@ boundaryField
 
     cylinder
     {
-        type           angularOscillatingDisplacement;
-	axis		(0 0 1);
-	origin		(0.03 0.03 0);
-	angle0		0;
-	amplitude	0.1745329;
-	omega		117.1160609;
-        value          uniform (0 0 0);
+        type            fixedValue;
+        value           $internalField;
     }
     flapTop
     {
@@ -68,6 +64,10 @@ boundaryField
         type            empty;
     }
     front
+    {
+        type            empty;
+    }
+        defaultFaces
     {
         type            empty;
     }

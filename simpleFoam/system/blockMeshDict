@@ -111,7 +111,7 @@ vertices
 ($xOutlet $yInf 0)			//Vertex 26
 ($xOutlet $y27 0)			//Vertex 27
 ($xOutlet $y28 0)			//Vertex 28
-($xOutlet $y29 0) 			//Vertex 29
+//($xOutlet $y29 0) 			//Vertex 29
 ($xOutlet $y30 0)			//Vertex 30
 ($xOutlet $ySup 0)			//Vertex 31
 ($xInlet $yInf 0.160)			//Vertex 32
@@ -143,7 +143,7 @@ vertices
 ($xOutlet $yInf 0.160)			//Vertex 58
 ($xOutlet $y27 0.160)			//Vertex 59
 ($xOutlet $y28 0.160)			//Vertex 60
-($xOutlet $y29 0.160) 			//Vertex 61
+//($xOutlet $y29 0.160) 		//Vertex 61
 ($xOutlet $y30 0.160)			//Vertex 62
 ($xOutlet $ySup 0.160)			//Vertex 63
 (0.0663 $yInf 0)			//Vertex 64
@@ -222,29 +222,29 @@ suma #calc "$N0y+$N2y";
 
 blocks
 (
-	hex (0 4 5 1 32 36 37 33) ($N0x $N0y 1) edgeGrading ($GxB0 $GxB0 $GxB0 $GxB0 $GyB0 $GyB0 $GyB0 $GyB0 1 1 1 1 ) // Bloque 0
-	hex (1 5 6 2 33 37 38 34) ($N0x $N1y 1) simpleGrading ($GxB0 1 1) // Bloque 1
-	hex (2 6 7 3 34 38 39 35) ($N0x $N2y 1) edgeGrading ($GxB2 $GxB2 $GxB2 $GxB2 $GyB2 $GyB2 $GyB2 $GyB2 1 1 1 1) // Bloque 2
-	hex (4 14 15 5 36 46 47 37) ($N3x $N0y 1) edgeGrading (1 1 1 1 $GyB0 $GyB0 $GyB0 $GyB0 1 1 1 1 ) // Bloque 3
-	hex (5 15 10 8 37 47 42 40) ($N3x $Nr 1) simpleGrading (1 $GrInv 1) // Bloque 4
-	hex (5 8 9 6 37 40 41 38) ($Nr $N1y 1) simpleGrading ($GrInv 1 1) // Bloque 5
-	hex (9 11 18 6 41 43 50 38) ($N3x $Nr 1) simpleGrading (1 $Gr 1) // Bloque 6
-	hex (6 18 19 7 38 50 51 39) ($N3x $N2y 1) edgeGrading (1 1 1 1 $GyB2 $GyB2 $GyB2 $GyB2 1 1 1 1) // Bloque 7
-	hex (10 15 16 12 42 47 48 44) ($Nr $N8y 1) simpleGrading ($Gr $Gy8 1) // Bloque 8
-	hex (13 17 18 11 45 49 50 43) ($Nr $N8y 1) simpleGrading ($Gr $Gy9 1) // Bloque 9
-	hex (14 20 21 15 46 52 53 47) ($N10x $N0y 1) edgeGrading (1 1 1 1 $GyB0 $GyB0 $GyB0 $GyB0 1 1 1 1 ) // Bloque 10 
-	hex (15 21 22 16 47 53 54 48) ($N10x $N8y 1) simpleGrading (1 $Gy8 1) // Bloque 11
-	hex (17 23 24 18 49 55 56 50) ($N10x $N8y 1) simpleGrading (1 $Gy9 1) // Bloque 12
-	hex (18 24 25 19 50 56 57 51) ($N10x $N2y 1) edgeGrading (1 1 1 1 $GyB2 $GyB2 $GyB2 $GyB2 1 1 1 1) // Bloque 13
-	hex (20 64 65 21 52 69 70 53) (1 $N0y 1) simpleGrading (1 $GyB0 1) // Bloque 14
-	hex (21 65 66 22 53 70 71 54) (1 $N8y 1) simpleGrading (1 $Gy8 1) // Bloque 15
-	hex (22 66 66 23 54 71 71 55) (1 2 1) simpleGrading (1 1 1) // Bloque 16
-	hex (23 66 67 24 55 71 72 56) (1 $N8y 1) simpleGrading (1 $Gy9 1) // Bloque 17
-	hex (24 67 68 25 56 72 73 57) (1 $N2y 1) simpleGrading (1 $GyB2 1) // Bloque 18
-	hex (64 26 27 65 69 58 59 70) ($Nxout $N0y 1) edgeGrading ($GxOutlet $GxOutlet $GxOutlet $GxOutlet $GyB0 $GyB0 $GyB0 $GyB0 1 1 1 1 )  // Bloque 19
-	hex (65 27 28 66 70 59 60 71) ($Nxout $N8y 1) edgeGrading ($GxOutlet $GxOutlet $GxOutlet $GxOutlet $Gy8 $Gy8 $Gy8 $Gy8 1 1 1 1) // Bloque 20
-	hex (66 28 30 67 71 60 62 72) ($Nxout $N8y 1) edgeGrading ($GxOutlet $GxOutlet $GxOutlet $GxOutlet $Gy9 $Gy9 $Gy9 $Gy9 1 1 1 1) // Bloque 21
-	hex (67 30 31 68 72 62 63 73) ($Nxout $N2y 1) edgeGrading ($GxOutlet $GxOutlet $GxOutlet $GxOutlet $GyB2 $GyB2 $GyB2 $GyB2 1 1 1 1 ) // Bloque 22
+	hex (0 4 5 1 31 35 36 32) ($N0x $N0y 1) edgeGrading ($GxB0 $GxB0 $GxB0 $GxB0 $GyB0 $GyB0 $GyB0 $GyB0 1 1 1 1 ) // Bloque 0
+	hex (1 5 6 2 32 36 37 33) ($N0x $N1y 1) simpleGrading ($GxB0 1 1) // Bloque 1
+	hex (2 6 7 3 33 37 38 34) ($N0x $N2y 1) edgeGrading ($GxB2 $GxB2 $GxB2 $GxB2 $GyB2 $GyB2 $GyB2 $GyB2 1 1 1 1) // Bloque 2
+	hex (4 14 15 5 35 45 46 36) ($N3x $N0y 1) edgeGrading (1 1 1 1 $GyB0 $GyB0 $GyB0 $GyB0 1 1 1 1 ) // Bloque 3
+	hex (5 15 10 8 36 46 41 39) ($N3x $Nr 1) simpleGrading (1 $GrInv 1) // Bloque 4
+	hex (5 8 9 6 36 39 40 37) ($Nr $N1y 1) simpleGrading ($GrInv 1 1) // Bloque 5
+	hex (9 11 18 6 40 42 49 37) ($N3x $Nr 1) simpleGrading (1 $Gr 1) // Bloque 6
+	hex (6 18 19 7 37 49 50 38) ($N3x $N2y 1) edgeGrading (1 1 1 1 $GyB2 $GyB2 $GyB2 $GyB2 1 1 1 1) // Bloque 7
+	hex (10 15 16 12 41 46 47 43) ($Nr $N8y 1) simpleGrading ($Gr $Gy8 1) // Bloque 8
+	hex (13 17 18 11 44 48 49 42) ($Nr $N8y 1) simpleGrading ($Gr $Gy9 1) // Bloque 9
+	hex (14 20 21 15 45 51 52 46) ($N10x $N0y 1) edgeGrading (1 1 1 1 $GyB0 $GyB0 $GyB0 $GyB0 1 1 1 1 ) // Bloque 10 
+	hex (15 21 22 16 46 52 53 47) ($N10x $N8y 1) simpleGrading (1 $Gy8 1) // Bloque 11
+	hex (17 23 24 18 48 54 55 49) ($N10x $N8y 1) simpleGrading (1 $Gy9 1) // Bloque 12
+	hex (18 24 25 19 49 55 56 50) ($N10x $N2y 1) edgeGrading (1 1 1 1 $GyB2 $GyB2 $GyB2 $GyB2 1 1 1 1) // Bloque 13
+	hex (20 62 63 21 51 67 68 52) (1 $N0y 1) simpleGrading (1 $GyB0 1) // Bloque 14
+	hex (21 63 64 22 52 68 69 53) (1 $N8y 1) simpleGrading (1 $Gy8 1) // Bloque 15
+	hex (22 64 64 23 53 69 69 54) (1 2 1) simpleGrading (1 1 1) // Bloque 16
+	hex (23 64 65 24 54 69 70 55) (1 $N8y 1) simpleGrading (1 $Gy9 1) // Bloque 17
+	hex (24 65 66 25 55 70 71 56) (1 $N2y 1) simpleGrading (1 $GyB2 1) // Bloque 18
+	hex (62 26 27 63 67 57 58 68) ($Nxout $N0y 1) edgeGrading ($GxOutlet $GxOutlet $GxOutlet $GxOutlet $GyB0 $GyB0 $GyB0 $GyB0 1 1 1 1 )  // Bloque 19
+	hex (63 27 28 64 68 58 59 69) ($Nxout $N8y 1) edgeGrading ($GxOutlet $GxOutlet $GxOutlet $GxOutlet $Gy8 $Gy8 $Gy8 $Gy8 1 1 1 1) // Bloque 20
+	hex (64 28 29 65 69 59 60 70) ($Nxout $N8y 1) edgeGrading ($GxOutlet $GxOutlet $GxOutlet $GxOutlet $Gy9 $Gy9 $Gy9 $Gy9 1 1 1 1) // Bloque 21
+	hex (65 29 30 66 70 60 61 71) ($Nxout $N2y 1) edgeGrading ($GxOutlet $GxOutlet $GxOutlet $GxOutlet $GyB2 $GyB2 $GyB2 $GyB2 1 1 1 1 ) // Bloque 22
 	
 );
 
@@ -283,29 +283,29 @@ yCilInf #calc "0.03-$radioVarilla";
 edges
 (
 	arc 5 6 ($x56 $y56 0) 
-	arc 37 38 ($x56 $y56 0.160) 
+	arc 36 37 ($x56 $y56 0.160) 
 	arc 8 9 ($xCilIzq $yCilIzq 0) 
-	arc 40 41 ($xCilIzq $yCilIzq 0.160) 
+	arc 39 40 ($xCilIzq $yCilIzq 0.160) 
 
 	arc 8 10 ($xCilInf $yCilInf 0) 
-	arc 40 42 ($xCilInf $yCilInf 0.160) 
+	arc 39 41 ($xCilInf $yCilInf 0.160) 
 	arc 5 15 ($x515 $y515 0) 
-	arc 37 47 ($x515 $y515 0.160) 
+	arc 36 46 ($x515 $y515 0.160) 
 	
 	arc 9 11 ($x911 $y911 0) 
-	arc 41 43 ($x911 $y911 0.160) 
+	arc 40 42 ($x911 $y911 0.160) 
 	arc 6 18 ($x618 $y618 0) 
-	arc 38 50 ($x618 $y618 0.160) 
+	arc 37 49 ($x618 $y618 0.160) 
 	
 	arc 10 12 ($x1012 $y1012 0) 
-	arc 42 44 ($x1012 $y1012 0.160) 
+	arc 41 43 ($x1012 $y1012 0.160) 
 	arc 15 16 ($x1516 $y1516 0) 
-	arc 47 48 ($x1516 $y1516 0.160) 
+	arc 46 47 ($x1516 $y1516 0.160) 
 	
 	arc 13 11 ($x1113 $y1113 0) 
-	arc 45 43 ($x1113 $y1113 0.160) 
+	arc 44 42 ($x1113 $y1113 0.160) 
 	arc 17 18 ($x1718 $y1718 0) 
-	arc 49 50 ($x1718 $y1718 0.160) 
+	arc 48 49 ($x1718 $y1718 0.160) 
 
 );
 
@@ -316,9 +316,9 @@ boundary
 		type patch;
 		faces
 		(
-			(33 1 0 32)
-			(34 2 1 33)
-			(35 3 2 34)
+			(32 1 0 31)
+			(33 2 1 32)
+			(34 3 2 33)
 		);
 	}
 
@@ -327,10 +327,10 @@ boundary
 		type patch;
 		faces
 		(
-			(26 27 59 58)
-			(27 28 60 59)
-			(28 30 62 60)
-			(30 31 63 62)
+			(26 27 58 57)
+			(27 28 59 58)
+			(28 29 60 59)
+			(29 30 61 60)
 		);
 	}
 	
@@ -339,11 +339,11 @@ boundary
 		type patch;
 		faces
 		(
-			(3 35 39 7)
-			(7 39 51 19)
-			(19 51 57 25)
-			(25 57 73 68)
-			(68 73 63 31)
+			(3 34 38 7)
+			(7 38 50 19)
+			(19 50 56 25)
+			(25 56 71 66)
+			(66 71 61 30)
 		);
 	}
 	
@@ -352,11 +352,11 @@ boundary
 		type patch;
 		faces
 		(
-			(4 36 32 0)
-			(14 46 36 4)
-			(20 52 46 14)
-			(64 69 52 20)
-			(26 58 69 64)
+			(4 35 31 0)
+			(14 45 35 4)
+			(20 51 45 14)
+			(62 67 51 20)
+			(26 57 67 62)
 		);
 	}
 	
@@ -365,8 +365,8 @@ boundary
 		type wall;
 		faces
 		(
-			(17 49 45 13)
-			(23 55 49 17)
+			(17 48 44 13)
+			(23 54 48 17)
 		);
 	}
 	
@@ -375,8 +375,8 @@ boundary
 		type wall;
 		faces
 		(
-			(54 22 16 48)
-			(48 16 12 44)
+			(53 22 16 47)
+			(47 16 12 43)
 		);
 	}
 	
@@ -385,7 +385,7 @@ boundary
 		type wall;
 		faces
 		(
-			(55 23 22 54)
+			(54 23 22 53)
 		);
 	}
 	
@@ -394,11 +394,11 @@ boundary
 		type wall;
 		faces
 		(
-			(11 43 41 9)
-			(43 11 13 45)
-			(9 41 40 8)
-			(42 10 8 40)
-			(44 12 10 42)
+			(11 42 40 9)
+			(42 11 13 44)
+			(9 40 39 8)
+			(41 10 8 39)
+			(43 12 10 41)
 		);
 	}
 	
@@ -407,29 +407,29 @@ boundary
 		type empty;
 		faces
 		(
+			(32 31 35 36)
 			(33 32 36 37)
 			(34 33 37 38)
-			(35 34 38 39)
-			(37 36 46 47)
-			(40 37 47 42)
-			(38 37 40 41)
-			(38 41 43 50)
-			(39 38 50 51)
-			(44 42 47 48)
-			(43 45 49 50)
+			(36 35 45 46)
+			(39 36 46 41)
+			(37 36 39 40)
+			(37 40 42 49)
+			(38 37 49 50)
+			(43 41 46 47)
+			(42 44 48 49)
+			(46 45 51 52)
 			(47 46 52 53)
-			(48 47 53 54)
+			(49 48 54 55)
 			(50 49 55 56)
-			(51 50 56 57)
-			(53 52 69 70)
-			(54 53 70 71)
-			(55 54 71 71)
-			(56 55 71 72)
-			(57 56 72 73)
-			(70 69 58 59)
-			(71 70 59 60)
-			(72 71 60 62)
-			(73 72 62 63)
+			(52 51 67 68)
+			(53 52 68 69)
+			(54 53 69 69)
+			(55 54 69 70)
+			(56 55 70 71)
+			(68 67 57 58)
+			(69 68 58 59)
+			(70 69 59 60)
+			(71 70 60 61)
 		);
 	}
 	back
@@ -451,15 +451,15 @@ boundary
 			(15 16 22 21)
 			(17 18 24 23)
 			(18 19 25 24)
-			(21 65 64 20)
-			(22 66 65 21)
-			(23 66 66 22)
-			(24 67 66 23)
-			(25 68 67 24)
-			(65 27 26 64)
-			(66 28 27 65)
-			(67 30 28 66)
-			(68 31 30 67) 
+			(21 63 62 20)
+			(22 64 63 21)
+			(23 64 64 22)
+			(24 65 64 23)
+			(25 66 65 24)
+			(63 27 26 62)
+			(64 28 27 63)
+			(65 29 28 64)
+			(66 30 29 65) 
 		);
 	}
 );
