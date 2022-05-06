@@ -20,7 +20,6 @@ espesorAla 0.00005; //Espesor del ala
 
 //Grado de refinamiento deseado (0 a 2):
 n		2;
-// !!! No olvidar correr la utility extrudeMesh luego de blockMesh !!!
 
 // De acá en adelante, no toquetear.
 
@@ -111,51 +110,49 @@ vertices
 ($xOutlet $yInf 0)			//Vertex 26
 ($xOutlet $y27 0)			//Vertex 27
 ($xOutlet $y28 0)			//Vertex 28
-//($xOutlet $y29 0) 			//Vertex 29
-($xOutlet $y30 0)			//Vertex 30
-($xOutlet $ySup 0)			//Vertex 31
-($xInlet $yInf 0.160)			//Vertex 32
-($xInlet $y1 0.160)		        //Vertex 33
-($xInlet $y2 0.160)		        //Vertex 34
-($xInlet $ySup 0.160)			//Vertex 35
-($x4 $yInf 0.160)			//Vertex 36
-($x5 $y5 0.160)			//Vertex 37		
-($x6 $y6 0.160)			//Vertex 38	
-($x7 $ySup 0.160)			//Vertex 39	
-($x8 $y8 0.160)			//Vertex 40
-($x9 $y9 0.160)			//Vertex 41
-($x10 $y10 0.160)			//Vertex 42
-($x11 $y11 0.160)			//Vertex 43
-($x12 $y12 0.160)			//Vertex 44
-($x13 $y13 0.160)			//Vertex 45
-($x14 $yInf 0.160)			//Vertex 46
-($x15 $y15 0.160)			//Vertex 47
-($x16 $y16 0.160)			//Vertex 48
-($x17 $y17 0.160)			//Vertex 49
-($x18 $y18 0.160)			//Vertex 50
-($x19 $ySup 0.160)			//Vertex 51
-($x20 $yInf 0.160)			//Vertex 52
-($x21 $y21 0.160)			//Vertex 53
-($x22 $y22 0.160)			//Vertex 54
-($x23 $y23 0.160) 			//Vertex 55
-($x24 $y24 0.160)			//Vertex 56
-($x25 $ySup 0.160)			//Vertex 57
-($xOutlet $yInf 0.160)			//Vertex 58
-($xOutlet $y27 0.160)			//Vertex 59
-($xOutlet $y28 0.160)			//Vertex 60
-//($xOutlet $y29 0.160) 		//Vertex 61
-($xOutlet $y30 0.160)			//Vertex 62
-($xOutlet $ySup 0.160)			//Vertex 63
-(0.0663 $yInf 0)			//Vertex 64
-(0.0663 $y21 0)			//Vertex 65
-(0.0663 0.03 0)			//Vertex 66
-(0.0663 $y24 0)			//Vertex 67
-(0.0663 $ySup 0) 			//Vertex 68
-(0.0663 $yInf 0.160)			//Vertex 69
-(0.0663 $y21 0.160)			//Vertex 70
-(0.0663 0.03 0.160)			//Vertex 71
-(0.0663 $y24 0.160)			//Vertex 72
-(0.0663 $ySup 0.160)			//Vertex 73
+($xOutlet $y30 0)			//Vertex 29
+($xOutlet $ySup 0)			//Vertex 30
+($xInlet $yInf 0.160)			//Vertex 31
+($xInlet $y1 0.160)		        //Vertex 32
+($xInlet $y2 0.160)		        //Vertex 33
+($xInlet $ySup 0.160)			//Vertex 34
+($x4 $yInf 0.160)			//Vertex 35
+($x5 $y5 0.160)			//Vertex 36		
+($x6 $y6 0.160)			//Vertex 37	
+($x7 $ySup 0.160)			//Vertex 38	
+($x8 $y8 0.160)			//Vertex 39
+($x9 $y9 0.160)			//Vertex 40
+($x10 $y10 0.160)			//Vertex 41
+($x11 $y11 0.160)			//Vertex 42
+($x12 $y12 0.160)			//Vertex 43
+($x13 $y13 0.160)			//Vertex 44
+($x14 $yInf 0.160)			//Vertex 45
+($x15 $y15 0.160)			//Vertex 46
+($x16 $y16 0.160)			//Vertex 47
+($x17 $y17 0.160)			//Vertex 48
+($x18 $y18 0.160)			//Vertex 49
+($x19 $ySup 0.160)			//Vertex 50
+($x20 $yInf 0.160)			//Vertex 51
+($x21 $y21 0.160)			//Vertex 52
+($x22 $y22 0.160)			//Vertex 53
+($x23 $y23 0.160) 			//Vertex 54
+($x24 $y24 0.160)			//Vertex 55
+($x25 $ySup 0.160)			//Vertex 56
+($xOutlet $yInf 0.160)			//Vertex 57
+($xOutlet $y27 0.160)			//Vertex 58
+($xOutlet $y28 0.160)			//Vertex 59
+($xOutlet $y30 0.160)			//Vertex 60
+($xOutlet $ySup 0.160)			//Vertex 61
+(0.0663 $yInf 0)			//Vertex 62
+(0.0663 $y21 0)			//Vertex 63
+(0.0663 0.03 0)			//Vertex 64
+(0.0663 $y24 0)			//Vertex 65
+(0.0663 $ySup 0) 			//Vertex 66
+(0.0663 $yInf 0.160)			//Vertex 67
+(0.0663 $y21 0.160)			//Vertex 68
+(0.0663 0.03 0.160)			//Vertex 69
+(0.0663 $y24 0.160)			//Vertex 70
+(0.0663 $ySup 0.160)			//Vertex 71
 );
 
 // Parametros de refinamiento de malla.
