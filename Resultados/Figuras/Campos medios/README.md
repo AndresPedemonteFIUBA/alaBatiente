@@ -1,6 +1,6 @@
 # Campos medios
 
-## UR=0,29
+## V = 0,83 m/s
 | Frecuencia de forzado | Figura | Frecuencia de forzado | Figura |
 |-----------------------|-------|-----------------------|-------|
 | 8 Hz| ![8Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/Promedio%20magnitud%20V%20-%20083ms%20-%208Hz.png?raw=true) | 10 Hz| ![10Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/Promedio%20magnitud%20V%20-%20083ms%20-%2010Hz.png?raw=true) |
