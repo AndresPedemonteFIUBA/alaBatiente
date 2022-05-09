@@ -8,6 +8,8 @@
 
 ![CDvsf+](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/CDVsFrecuencia.png?raw=true)
 
+![stdDev](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/Std%20Dev%20-%20083.png?raw=true)
+
 ## Campos medios
 
 ### V = 0,83 m/s
