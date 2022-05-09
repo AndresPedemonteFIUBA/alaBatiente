@@ -1,0 +1,466 @@
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+FoamFile
+{
+    version         2.0;
+    format          ascii;
+    class           dictionary;
+    object          blockMeshDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+
+xInlet -0.05; // Posición en x del inlet.
+xOutlet 0.25; // Posición en x del outlet.
+yInf -0.06;  // Borde inferior del dominio.
+ySup 0.12; //Borde superior del dominio.
+relacionRadios 4; // Relación de radios entre el radio de las esquinas de los bloques semicirculares que rodean a la varilla y el radio de la varilla.
+diametroVarilla 0.002; // Diámetro de la varilla.
+largoAla 0.035; //Largo del ala.
+espesorAla 0.00005; //Espesor del ala
+
+//Grado de refinamiento deseado (0 a 2):
+n		2;
+
+// De acá en adelante, no toquetear.
+
+radioVarilla #calc "$diametroVarilla/2.0";
+x5 #calc "0.03+$relacionRadios*$radioVarilla*cos(degToRad(225.0))";
+y5 #calc "0.03+$relacionRadios*$radioVarilla*sin(degToRad(225.0))";
+x6 #calc "0.03+$relacionRadios*$radioVarilla*cos(degToRad(135.0))";
+y6 #calc "0.03+$relacionRadios*$radioVarilla*sin(degToRad(135.0))";
+x15 #calc "0.03+$relacionRadios*$radioVarilla*cos(degToRad(315.0))";
+y15 #calc "0.03+$relacionRadios*$radioVarilla*sin(degToRad(315.0))";
+x18 #calc "0.03+$relacionRadios*$radioVarilla*cos(degToRad(45.0))";
+y18 #calc "0.03+$relacionRadios*$radioVarilla*sin(degToRad(45.0))";
+y1 #calc "$y5";
+y2 #calc "$y6";
+x4 #calc "$x5";
+x7 #calc "$x6";
+x8 #calc "0.03+$radioVarilla*cos(degToRad(225.0))";
+y8 #calc "0.03+$radioVarilla*sin(degToRad(225.0))";
+x9 #calc "0.03+$radioVarilla*cos(degToRad(135.0))";
+y9 #calc "0.03+$radioVarilla*sin(degToRad(135.0))";
+x10 #calc "0.03+$radioVarilla*cos(degToRad(315.0))";
+y10 #calc "0.03+$radioVarilla*sin(degToRad(315.0))";
+x11 #calc "0.03+$radioVarilla*cos(degToRad(45.0))";
+y11 #calc "0.03+$radioVarilla*sin(degToRad(45.0))";
+y12 #calc "0.03-$espesorAla/2.0";
+y13 #calc "0.03+$espesorAla/2.0";
+ang12 #calc "asin((-$espesorAla/2.0)/$radioVarilla)";
+ang13 #calc "asin(($espesorAla/2.0)/$radioVarilla)";
+x12 #calc "0.03+$radioVarilla*cos($ang12)";
+x13 #calc "0.03+$radioVarilla*cos($ang13)";
+x14 #calc "$x15";
+x19 #calc "$x18";
+x22 #calc "0.03+$radioVarilla+$largoAla";
+y22 #calc "0.03-$espesorAla/2.0";
+x23 #calc "0.03+$radioVarilla+$largoAla";
+y23 #calc "0.03+$espesorAla/2.0";
+altura #calc "$ySup-($yInf)";
+calAux #calc "sqrt(pow($altura,2)-pow($espesorAla/2.0,2))";
+x20 #calc "$x22";
+x21 #calc "$x22";
+x24 #calc "$x23";
+x25 #calc "$x23";
+y21 #calc "$y15";
+y24 #calc "$y18";
+y27 #calc "$y21";
+y28 0.03;
+y29 #calc "$y23";
+y30 #calc "$y24";
+
+
+centroDer #calc "-sqrt(pow(2.0*$relacionRadios*$radioVarilla,2)-pow($y18-0.03,2))+$x18";
+ang16 #calc "asin((-$espesorAla/2.0)/(2.0*$relacionRadios*$radioVarilla))";
+ang17 #calc "asin(($espesorAla/2.0)/(2.0*$relacionRadios*$radioVarilla))";
+x16 #calc "$centroDer+2.0*$relacionRadios*$radioVarilla*cos($ang16)";
+x17 #calc "$centroDer+2.0*$relacionRadios*$radioVarilla*cos($ang17)";
+y16 #calc "0.03-$espesorAla/2.0";
+y17 #calc "0.03+$espesorAla/2.0";
+
+
+vertices
+(
+($xInlet $yInf 0)			//Vertex 0
+($xInlet $y1 0)			//Vertex 1
+($xInlet $y2 0)			//Vertex 2
+($xInlet $ySup 0)			//Vertex 3
+($x4 $yInf 0)				//Vertex 4
+($x5 $y5 0)				//Vertex 5		
+($x6 $y6 0)				//Vertex 6		
+($x7 $ySup 0)				//Vertex 7			
+($x8 $y8 0)				//Vertex 8		
+($x9 $y9 0)				//Vertex 9
+($x10 $y10 0)				//Vertex 10
+($x11 $y11 0)				//Vertex 11
+($x12 $y12 0)				//Vertex 12
+($x13 $y13 0)				//Vertex 13
+($x14 $yInf 0)				//Vertex 14
+($x15 $y15 0)				//Vertex 15
+($x16 $y16 0)				//Vertex 16
+($x17 $y17 0)				//Vertex 17
+($x18 $y18 0)				//Vertex 18
+($x19 $ySup 0)				//Vertex 19
+($x20 $yInf 0)				//Vertex 20
+($x21 $y21 0)				//Vertex 21
+($x22 $y22 0)				//Vertex 22
+($x23 $y23 0) 				//Vertex 23
+($x24 $y24 0)				//Vertex 24
+($x25 $ySup 0)				//Vertex 25
+($xOutlet $yInf 0)			//Vertex 26
+($xOutlet $y27 0)			//Vertex 27
+($xOutlet $y28 0)			//Vertex 28
+($xOutlet $y30 0)			//Vertex 29
+($xOutlet $ySup 0)			//Vertex 30
+($xInlet $yInf 0.160)			//Vertex 31
+($xInlet $y1 0.160)		        //Vertex 32
+($xInlet $y2 0.160)		        //Vertex 33
+($xInlet $ySup 0.160)			//Vertex 34
+($x4 $yInf 0.160)			//Vertex 35
+($x5 $y5 0.160)			//Vertex 36		
+($x6 $y6 0.160)			//Vertex 37	
+($x7 $ySup 0.160)			//Vertex 38	
+($x8 $y8 0.160)			//Vertex 39
+($x9 $y9 0.160)			//Vertex 40
+($x10 $y10 0.160)			//Vertex 41
+($x11 $y11 0.160)			//Vertex 42
+($x12 $y12 0.160)			//Vertex 43
+($x13 $y13 0.160)			//Vertex 44
+($x14 $yInf 0.160)			//Vertex 45
+($x15 $y15 0.160)			//Vertex 46
+($x16 $y16 0.160)			//Vertex 47
+($x17 $y17 0.160)			//Vertex 48
+($x18 $y18 0.160)			//Vertex 49
+($x19 $ySup 0.160)			//Vertex 50
+($x20 $yInf 0.160)			//Vertex 51
+($x21 $y21 0.160)			//Vertex 52
+($x22 $y22 0.160)			//Vertex 53
+($x23 $y23 0.160) 			//Vertex 54
+($x24 $y24 0.160)			//Vertex 55
+($x25 $ySup 0.160)			//Vertex 56
+($xOutlet $yInf 0.160)			//Vertex 57
+($xOutlet $y27 0.160)			//Vertex 58
+($xOutlet $y28 0.160)			//Vertex 59
+($xOutlet $y30 0.160)			//Vertex 60
+($xOutlet $ySup 0.160)			//Vertex 61
+(0.0663 $yInf 0)			//Vertex 62
+(0.0663 $y21 0)			//Vertex 63
+(0.0663 0.03 0)			//Vertex 64
+(0.0663 $y24 0)			//Vertex 65
+(0.0663 $ySup 0) 			//Vertex 66
+(0.0663 $yInf 0.160)			//Vertex 67
+(0.0663 $y21 0.160)			//Vertex 68
+(0.0663 0.03 0.160)			//Vertex 69
+(0.0663 $y24 0.160)			//Vertex 70
+(0.0663 $ySup 0.160)			//Vertex 71
+);
+
+// Parametros de refinamiento de malla.
+
+N0x #calc "pow(2.0,$n)*10"; // Cantidad de celdas en la dirección x en el bloque 0.
+N0y #calc "pow(2.0,$n)*12"; // Cantidad de celdas en la dirección y en el bloque 0.
+
+// N1x = N0x // Cantidad de celdas en la dirección x en el bloque 1. Igual a N0x.
+N1y #calc "pow(2.0,$n)*3"; // Cantidad de celdas en la dirección y en el bloque 1.
+
+// N2x = N0x // Cantidad de celdas en la dirección x en el bloque 2. Igual a N0x.
+N2y #calc"pow(2.0,$n)*12"; // Cantidad de celdas en la dirección y en el bloque 2.
+
+//N3y = N0y / Cantidad de celdas en la dirección y en el bloque 3. Igual a N0y.
+N3x #calc"pow(2.0,$n)*4"; // Cantidad de celdas en la dirección x en el bloque 3.
+
+//N4x = N3x
+Nr #calc "pow(2.0,$n)*5"; // Cantidad de celdas en la dirección radial de los bloques 4 5 6.
+
+//N5y=N1y
+
+//N6x = N7x = N3x
+
+// N7x = N3x
+// N7y = N2y
+
+// N8x equiv Nr.
+N8y #calc "pow(2.0,$n)*4";
+
+//N9x equiv Nr.
+//N9y = N8y (para hacerlo simétrico).
+
+
+N10x #calc "pow(2.0,$n)*25"; // // Cantidad de celdas en la dirección x en el bloque 10. 
+// Nr + N10x es la cantidad de celdas a lo largo de la longitud L del ala.
+// N10y = N3y
+
+//N11x = N10x
+//N11y = N8y
+
+//N12x = N10x (para hacerlo simétrico).
+//N12y = N9y
+
+// N13x = N10x (para hacerlo simétrico).
+// N13y = N2y
+
+Nxout #calc "pow(2.0,$n)*30"; // Esto es la cantidad de celdas en x de los bloques 14, 15, 16, 17 y 18.
+NyWake 2; // Cantidad de celdas en y en el bloque 16.
+GxOutlet 15; // Gradiente de tamaño de celda en la dirección x después del ala hacia el outlet.
+
+Gr 4; // Gradiente de tamaño de las celdas en la dirección radial para los bloques 4, 5, 6, 8 y 9.
+GrInv 0.25; // Reciproco de Gr.
+
+GxB0 0.25; // Gradiente de tamaño de las celdas en la dirección x para los bloques 0, 3, 10 y 14.
+GxB2 #calc "$GxB0"; //Igual a GxB0.
+
+GyB0 0.2; // Gradiente de tamaño de las celdas en la dirección y para los bloques 0, 3, 10 y 14.
+GyB2 5; //Reciproco de GyB0.
+
+Gy8 0.5; //
+Gy9 2; // 
+
+suma #calc "$N0y+$N2y";
+
+blocks
+(
+	hex (0 4 5 1 31 35 36 32) ($N0x $N0y 1) edgeGrading ($GxB0 $GxB0 $GxB0 $GxB0 $GyB0 $GyB0 $GyB0 $GyB0 1 1 1 1 ) // Bloque 0
+	hex (1 5 6 2 32 36 37 33) ($N0x $N1y 1) simpleGrading ($GxB0 1 1) // Bloque 1
+	hex (2 6 7 3 33 37 38 34) ($N0x $N2y 1) edgeGrading ($GxB2 $GxB2 $GxB2 $GxB2 $GyB2 $GyB2 $GyB2 $GyB2 1 1 1 1) // Bloque 2
+	hex (4 14 15 5 35 45 46 36) ($N3x $N0y 1) edgeGrading (1 1 1 1 $GyB0 $GyB0 $GyB0 $GyB0 1 1 1 1 ) // Bloque 3
+	hex (5 15 10 8 36 46 41 39) ($N3x $Nr 1) simpleGrading (1 $GrInv 1) // Bloque 4
+	hex (5 8 9 6 36 39 40 37) ($Nr $N1y 1) simpleGrading ($GrInv 1 1) // Bloque 5
+	hex (9 11 18 6 40 42 49 37) ($N3x $Nr 1) simpleGrading (1 $Gr 1) // Bloque 6
+	hex (6 18 19 7 37 49 50 38) ($N3x $N2y 1) edgeGrading (1 1 1 1 $GyB2 $GyB2 $GyB2 $GyB2 1 1 1 1) // Bloque 7
+	hex (10 15 16 12 41 46 47 43) ($Nr $N8y 1) simpleGrading ($Gr $Gy8 1) // Bloque 8
+	hex (13 17 18 11 44 48 49 42) ($Nr $N8y 1) simpleGrading ($Gr $Gy9 1) // Bloque 9
+	hex (14 20 21 15 45 51 52 46) ($N10x $N0y 1) edgeGrading (1 1 1 1 $GyB0 $GyB0 $GyB0 $GyB0 1 1 1 1 ) // Bloque 10 
+	hex (15 21 22 16 46 52 53 47) ($N10x $N8y 1) simpleGrading (1 $Gy8 1) // Bloque 11
+	hex (17 23 24 18 48 54 55 49) ($N10x $N8y 1) simpleGrading (1 $Gy9 1) // Bloque 12
+	hex (18 24 25 19 49 55 56 50) ($N10x $N2y 1) edgeGrading (1 1 1 1 $GyB2 $GyB2 $GyB2 $GyB2 1 1 1 1) // Bloque 13
+	hex (20 62 63 21 51 67 68 52) (1 $N0y 1) simpleGrading (1 $GyB0 1) // Bloque 14
+	hex (21 63 64 22 52 68 69 53) (1 $N8y 1) simpleGrading (1 $Gy8 1) // Bloque 15
+	hex (22 64 64 23 53 69 69 54) (1 2 1) simpleGrading (1 1 1) // Bloque 16
+	hex (23 64 65 24 54 69 70 55) (1 $N8y 1) simpleGrading (1 $Gy9 1) // Bloque 17
+	hex (24 65 66 25 55 70 71 56) (1 $N2y 1) simpleGrading (1 $GyB2 1) // Bloque 18
+	hex (62 26 27 63 67 57 58 68) ($Nxout $N0y 1) edgeGrading ($GxOutlet $GxOutlet $GxOutlet $GxOutlet $GyB0 $GyB0 $GyB0 $GyB0 1 1 1 1 )  // Bloque 19
+	hex (63 27 28 64 68 58 59 69) ($Nxout $N8y 1) edgeGrading ($GxOutlet $GxOutlet $GxOutlet $GxOutlet $Gy8 $Gy8 $Gy8 $Gy8 1 1 1 1) // Bloque 20
+	hex (64 28 29 65 69 59 60 70) ($Nxout $N8y 1) edgeGrading ($GxOutlet $GxOutlet $GxOutlet $GxOutlet $Gy9 $Gy9 $Gy9 $Gy9 1 1 1 1) // Bloque 21
+	hex (65 29 30 66 70 60 61 71) ($Nxout $N2y 1) edgeGrading ($GxOutlet $GxOutlet $GxOutlet $GxOutlet $GyB2 $GyB2 $GyB2 $GyB2 1 1 1 1 ) // Bloque 22
+	
+);
+
+
+xCilIzq #calc "0.03-$radioVarilla";
+yCilIzq 0.03;
+centroIzq #calc "sqrt(pow(2.0*$relacionRadios*$radioVarilla,2)-pow($y6-0.03,2))+$x6";
+x56 #calc "$centroIzq+2.0*$relacionRadios*$radioVarilla*cos(degToRad(180.0))";
+y56 #calc "0.03+2.0*$relacionRadios*$radioVarilla*sin(degToRad(180.0))";
+
+centroInf #calc "sqrt(pow(2.0*$relacionRadios*$radioVarilla,2)-pow($x5-0.03,2))+$y5";
+x515 #calc "0.03+2.0*$relacionRadios*$radioVarilla*cos(degToRad(270.0))";
+y515 #calc "$centroInf+2.0*$relacionRadios*$radioVarilla*sin(degToRad(270.0))";
+
+centroSup #calc "-sqrt(pow(2.0*$relacionRadios*$radioVarilla,2)-pow($x6-0.03,2))+$y6";
+x618 #calc "0.03+2*$relacionRadios*$radioVarilla*cos(degToRad(90.0))";
+y618 #calc "$centroSup+2*$relacionRadios*$radioVarilla*sin(degToRad(90.0))";
+
+x1718 #calc "$centroDer+2*$relacionRadios*$radioVarilla*cos(degToRad(20.0))";
+y1718 #calc "0.03+2*$relacionRadios*$radioVarilla*sin(degToRad(20.0))";
+x1516 #calc "$centroDer+2*$relacionRadios*$radioVarilla*cos(degToRad(340.0))";
+y1516 #calc "0.03+2*$relacionRadios*$radioVarilla*sin(degToRad(340.0))";
+
+x810 0.03;
+y810 #calc "0.03-$radioVarilla";
+x911 0.03;
+y911 #calc "0.03+$radioVarilla";
+x1012 #calc "0.03 + $radioVarilla*cos(degToRad(320))";
+y1012 #calc "0.03 + $radioVarilla*sin(degToRad(320))";
+x1113 #calc "0.03 + $radioVarilla*cos(degToRad(40))";
+y1113 #calc "0.03 + $radioVarilla*sin(degToRad(40))";
+
+xCilInf 0.03;
+yCilInf #calc "0.03-$radioVarilla";
+
+edges
+(
+	arc 5 6 ($x56 $y56 0) 
+	arc 36 37 ($x56 $y56 0.160) 
+	arc 8 9 ($xCilIzq $yCilIzq 0) 
+	arc 39 40 ($xCilIzq $yCilIzq 0.160) 
+
+	arc 8 10 ($xCilInf $yCilInf 0) 
+	arc 39 41 ($xCilInf $yCilInf 0.160) 
+	arc 5 15 ($x515 $y515 0) 
+	arc 36 46 ($x515 $y515 0.160) 
+	
+	arc 9 11 ($x911 $y911 0) 
+	arc 40 42 ($x911 $y911 0.160) 
+	arc 6 18 ($x618 $y618 0) 
+	arc 37 49 ($x618 $y618 0.160) 
+	
+	arc 10 12 ($x1012 $y1012 0) 
+	arc 41 43 ($x1012 $y1012 0.160) 
+	arc 15 16 ($x1516 $y1516 0) 
+	arc 46 47 ($x1516 $y1516 0.160) 
+	
+	arc 13 11 ($x1113 $y1113 0) 
+	arc 44 42 ($x1113 $y1113 0.160) 
+	arc 17 18 ($x1718 $y1718 0) 
+	arc 48 49 ($x1718 $y1718 0.160) 
+
+);
+
+boundary
+(
+	inlet
+	{
+		type patch;
+		faces
+		(
+			(32 1 0 31)
+			(33 2 1 32)
+			(34 3 2 33)
+		);
+	}
+
+	outlet
+	{
+		type patch;
+		faces
+		(
+			(26 27 58 57)
+			(27 28 59 58)
+			(28 29 60 59)
+			(29 30 61 60)
+		);
+	}
+	
+	top
+	{
+		type patch;
+		faces
+		(
+			(3 34 38 7)
+			(7 38 50 19)
+			(19 50 56 25)
+			(25 56 71 66)
+			(66 71 61 30)
+		);
+	}
+	
+	bottom
+	{
+		type patch;
+		faces
+		(
+			(4 35 31 0)
+			(14 45 35 4)
+			(20 51 45 14)
+			(62 67 51 20)
+			(26 57 67 62)
+		);
+	}
+	
+	flapTop
+	{
+		type wall;
+		faces
+		(
+			(17 48 44 13)
+			(23 54 48 17)
+		);
+	}
+	
+	flapBottom
+	{
+		type wall;
+		faces
+		(
+			(53 22 16 47)
+			(47 16 12 43)
+		);
+	}
+	
+	flapSide
+	{
+		type wall;
+		faces
+		(
+			(54 23 22 53)
+		);
+	}
+	
+	cylinder
+	{
+		type wall;
+		faces
+		(
+			(11 42 40 9)
+			(42 11 13 44)
+			(9 40 39 8)
+			(41 10 8 39)
+			(43 12 10 41)
+		);
+	}
+	
+	front
+	{
+		type empty;
+		faces
+		(
+			(32 31 35 36)
+			(33 32 36 37)
+			(34 33 37 38)
+			(36 35 45 46)
+			(39 36 46 41)
+			(37 36 39 40)
+			(37 40 42 49)
+			(38 37 49 50)
+			(43 41 46 47)
+			(42 44 48 49)
+			(46 45 51 52)
+			(47 46 52 53)
+			(49 48 54 55)
+			(50 49 55 56)
+			(52 51 67 68)
+			(53 52 68 69)
+			(54 53 69 69)
+			(55 54 69 70)
+			(56 55 70 71)
+			(68 67 57 58)
+			(69 68 58 59)
+			(70 69 59 60)
+			(71 70 60 61)
+		);
+	}
+	back
+	{
+		type empty;
+		faces
+		(
+			(0 1 5 4)
+			(1 2 6 5)
+			(2 3 7 6)
+			(4 5 15 14)
+			(5 8 10 15)
+			(5 6 9 8)
+			(9 6 18 11)
+			(6 7 19 18)
+			(14 15 21 20)
+			(10 12 16 15)
+			(13 11 18 17)
+			(15 16 22 21)
+			(17 18 24 23)
+			(18 19 25 24)
+			(21 63 62 20)
+			(22 64 63 21)
+			(23 64 64 22)
+			(24 65 64 23)
+			(25 66 65 24)
+			(63 27 26 62)
+			(64 28 27 63)
+			(65 29 28 64)
+			(66 30 29 65) 
+		);
+	}
+);
+
+mergePatchPairs
+(
+);

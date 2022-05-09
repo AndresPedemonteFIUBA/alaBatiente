@@ -1,0 +1,84 @@
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      fvSolution;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+solvers
+{
+    p
+    {
+        solver           GAMG;
+        tolerance        1e-5;
+        relTol           1e-3;
+        smoother         DICGaussSeidel;
+    }
+
+    pFinal
+    {
+        $p;
+        tolerance       1e-7;
+        relTol          1e-5;
+    }
+
+    pcorr
+    {
+        solver           GAMG;
+        tolerance        1e-5;
+        relTol           1e-5;
+        smoother         GaussSeidel;
+    }
+
+    pcorrFinal
+    {
+        $pcorr;
+        relTol          0;
+    }
+
+    phi
+    {
+        $p;
+    }
+
+    "(U|cellDisplacement|pointDisplacement)"
+    {
+        solver          smoothSolver;
+        smoother        symGaussSeidel;
+        tolerance       1e-7;
+        relTol          1e-5;
+    }
+
+    "(U|cellDisplacement|pointDisplacement)Final"
+    {
+        $U;
+        relTol          0;
+    }
+}
+
+PIMPLE
+{
+    nOuterCorrectors 100;
+    nCorrectors 3;
+    nNonOrthogonalCorrectors 1;
+    //tolerance 1.0e-12;
+
+    correctPhi          yes;
+    //relTol 1e-4;
+    //pisoTol 1e-6;
+    consistent  true;
+    outerCorrectorResidualControl
+    {
+        "(U|p)"
+        {
+            relTol          1e-5;
+            tolerance	     1e-5;
+        }
+    }
+}
+
+// ************************************************************************* //
