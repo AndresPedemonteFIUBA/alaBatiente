@@ -10,6 +10,8 @@
 
 ![stdDev](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/Std%20Dev%20-%20083.png?raw=true)
 
+![stdDevExt](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/Std%20Dev%20Y%20Extendido.png?raw=true)
+
 ## Campos medios
 
 ### V = 0,83 m/s
