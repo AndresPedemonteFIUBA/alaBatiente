@@ -4,7 +4,7 @@
 
 (Estas se irán actualizando)
 
-![d+vsf+](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/DesplazamientoVsFrecuencia.png?raw=true)
+![d+vsf+](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/DesplazamientoVsFrecuencia.png?raw=true=250x)
 
 ![CDvsf+](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/CDVsFrecuencia.png?raw=true)
 
