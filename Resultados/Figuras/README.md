@@ -3,18 +3,14 @@
 ## Globales
 
 (Estas se irán actualizando)
-
-![d+vsf+](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/DesplazamientoVsFrecuencia.png?raw=true)
-
-![CDvsf+](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/CDVsFrecuencia.png?raw=true)
-
+| ----------- | -------- |
+| ![d+vsf+](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/DesplazamientoVsFrecuencia.png?raw=true) |
+![CDvsf+](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/CDVsFrecuencia.png?raw=true) |
 |![vx-VExt](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/vx%20medio%20-%20083%20-%20Extendido.png?raw=true)| ![vx-V-Max](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/MaxvxMeanMinV.png?raw=true) |
-
-|![stdDevExt](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/Std%20Dev%20Y%20%20-%20083%20-%20Extendido.png?raw=true)|![stdDevMax](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/MaxStdDevVy-YZero.png?raw=true)|
-
-|![vx-V](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/vx%20medio%20-%20083.png?raw=true)| ![vx-V-Max](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/MaxvxMeanMinV.png?raw=true) |
-
-|![stdDev](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/Std%20Dev%20Y%20%20-%20083.png?raw=true)|![stdDevMax](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/MaxStdDevVy-YZero.png?raw=true)|
+| ![stdDevExt](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/Std%20Dev%20Y%20%20-%20083%20-%20Extendido.png?raw=true) | ![stdDevMax](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/MaxStdDevVy-YZero.png?raw=true) |
+| ![vx-V](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/vx%20medio%20-%20083.png?raw=true) | ![vx-V-Max](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/MaxvxMeanMinV.png?raw=true) |
+| ![stdDev](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/Std%20Dev%20Y%20%20-%20083.png?raw=true) | ![stdDevMax](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/MaxStdDevVy-YZero.png?raw=true) |
+| ----------- | -------- |
 
 ## Campos medios
 
