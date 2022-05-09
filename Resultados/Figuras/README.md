@@ -3,7 +3,8 @@
 ## Globales
 
 (Estas se irán actualizando)
-| ----------- | -------- |
+|Gráfico|Gráfico|
+|-|-|
 | ![d+vsf+](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/DesplazamientoVsFrecuencia.png?raw=true) |
 ![CDvsf+](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/CDVsFrecuencia.png?raw=true) |
 |![vx-VExt](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/vx%20medio%20-%20083%20-%20Extendido.png?raw=true)| ![vx-V-Max](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/MaxvxMeanMinV.png?raw=true) |
