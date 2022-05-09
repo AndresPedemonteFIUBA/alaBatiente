@@ -8,9 +8,13 @@
 
 ![CDvsf+](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/CDVsFrecuencia.png?raw=true)
 
-![stdDev](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/Std%20Dev%20-%20083.png?raw=true)
+![vx-VExt](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/vx%20medio%20-%20083%20-%20Extendido.png?raw=true)
 
-![stdDevExt](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/Std%20Dev%20Y%20Extendido.png?raw=true)
+![stdDevExt](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/Std%20Dev%20Y%20%20-%20083%20-%20Extendido.png?raw=true)
+
+![vx-V](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/vx%20medio%20-%20083.png?raw=true)
+
+![stdDev](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/Std%20Dev%20Y%20%20-%20083.png?raw=true)
 
 ## Campos medios
 
