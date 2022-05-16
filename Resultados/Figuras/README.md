@@ -35,3 +35,17 @@
 |12 Hz| ![12Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/Promedio%20Vx%20-%20083ms%20-%2012Hz.png?raw=true) |14 Hz|![14Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/Promedio%20Vx%20-%20083ms%20-%2014Hz.png?raw=true)|
 |16 Hz| ![16Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/Promedio%20Vx%20-%20083ms%20-%2016Hz.png?raw=true) |18 Hz| ![18Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/Promedio%20Vx%20-%20083ms%20-%2018Hz.png?raw=true) |
 |20 Hz|![20Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/Promedio%20Vx%20-%20083ms%20-%2020Hz.png?raw=true)|  |    |
+
+## Coeficientes de fuerza
+
+### V=0,83 m/s
+
+| Frecuencia de forzado | CD | CL | 
+|-----------------------|-------|-----------------------|
+| 8 Hz | ![CD8](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/CoeficientesDeFuerza/CD-083ms-8Hz.png?raw=true) | ![CL8](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/CoeficientesDeFuerza/CL-083ms-8Hz.png?raw=true) | 
+| 10 Hz | ![CD10](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/CoeficientesDeFuerza/CD-083ms-10Hz.png?raw=true) | ![CL10](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/CoeficientesDeFuerza/CL-083ms-10Hz.png?raw=true) |
+| 12 Hz | ![CD12](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/CoeficientesDeFuerza/CD-083ms-12Hz.png?raw=true) | ![CL12]() |
+| 14 Hz | ![CD14](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/CoeficientesDeFuerza/CD-083ms-14Hz.png?raw=true) | ![CL14](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/CoeficientesDeFuerza/CL-083ms-14Hz.png?raw=true) |
+| 16 Hz | ![CD16](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/CoeficientesDeFuerza/CD-083ms-16Hz.png?raw=true) | ![CL16](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/CoeficientesDeFuerza/CL-083ms-16Hz.png?raw=true) |
+| 18 Hz | ![CD18](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/CoeficientesDeFuerza/CD-083ms-18Hz.png?raw=true) | ![CL18](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/CoeficientesDeFuerza/CL-083ms-18Hz.png?raw=true) |
+| 20 Hz | ![CD20]() | ![CL20]() |
