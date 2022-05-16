@@ -12,7 +12,6 @@
 |-|-|
 | ![vx-V](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/vxMean.png?raw=true) | ![vx-V-Max](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/MaxvxMeanMinV.png?raw=true) |
 | ![stdDev](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/stdDevY.png?raw=true) | ![stdDevMax](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/MaxStdDevVy-YZero.png?raw=true) |
-| ----------- | -------- |
 
 ## Campos medios
 
