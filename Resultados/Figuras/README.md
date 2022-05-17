@@ -44,7 +44,7 @@
 |12 Hz| ![12Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/Promedio%20Q%20-%20083ms%20-%2012Hz.png?raw=true) |
 |14 Hz|![14Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/Promedio%20Q%20-%20083ms%20-%2014Hz.png?raw=true)|
 |16 Hz| ![16Hz]() |
-|18 Hz| ![18Hz]() |
+|18 Hz| ![18Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/Promedio%20Q%20-%20083ms%20-%2018Hz.png?raw=true) |
 |20 Hz|![20Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/Promedio%20Q%20-%20083ms%20-%2020Hz.png?raw=true)| 
 
 
