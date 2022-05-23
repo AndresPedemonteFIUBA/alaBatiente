@@ -15,7 +15,7 @@
 
 ## Campos medios
 
-### $V_R = 0,28$
+### V_R = 0,28
 
 -Magnitud V
 
