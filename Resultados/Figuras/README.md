@@ -15,6 +15,39 @@
 
 ## Campos medios
 
+### V_R = 0,22
+
+-Magnitud V
+
+| Frecuencia de forzado | Figura | Frecuencia de forzado | Figura |
+|-----------------------|-------|-----------------------|-------|
+|6 Hz| ![6Hz]() | 8 Hz| ![8Hz]() | 
+|10 Hz| ![10Hz]() |12 Hz| ![12Hz]() |
+|14 Hz|![14Hz]() | 16 Hz| ![16Hz]()|
+|18 Hz| ![18Hz]() | 20 Hz|![20Hz]()| 
+
+-Media temporal de vx
+
+| Frecuencia de forzado | Figura | Frecuencia de forzado | Figura |
+|-----------------------|-------|-----------------------|-------|
+|6 Hz| ![6Hz]() | 8 Hz| ![8Hz]() | 
+|10 Hz| ![10Hz]() |12 Hz| ![12Hz]() |
+|14 Hz|![14Hz]()|16 Hz| ![16Hz]() |
+|18 Hz| ![18Hz]() |20 Hz|![20Hz]() | 
+
+-Q
+
+| Frecuencia de forzado | Figura | 
+|-----------------------|-------|
+| 6 Hz| ![6Hz]() |
+|8 Hz| ![8Hz]() |
+| 10 Hz| ![10Hz]() |
+|12 Hz| ![12Hz]() |
+|14 Hz|![14Hz]() |
+|16 Hz| ![16Hz]() |
+|18 Hz| ![18Hz]() |
+|20 Hz|![20Hz]()| 
+
 ### V_R = 0,28
 
 -Magnitud V
@@ -45,7 +78,8 @@
 |12 Hz| ![12Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/VR028/PromedioQ-083ms-12Hz.png?raw=true) |
 |14 Hz|![14Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/VR028/PromedioQ-083ms-14Hz.png?raw=true) |
 |16 Hz| ![16Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/VR028/PromedioQ-083ms-16Hz.png?raw=true) |
-|18 Hz| ![18Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/VR028/PromedioQ-083ms-18Hz.png?raw=true) |20 Hz|![20Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/VR028/PromedioQ-083ms-20Hz.png?raw=true)| 
+|18 Hz| ![18Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/VR028/PromedioQ-083ms-18Hz.png?raw=true) |
+|20 Hz|![20Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/VR028/PromedioQ-083ms-20Hz.png?raw=true)| 
 
 ### V_R = 0,35
 
