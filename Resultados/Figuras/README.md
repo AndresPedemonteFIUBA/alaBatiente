@@ -30,10 +30,10 @@
 
 | Frecuencia de forzado | Figura | Frecuencia de forzado | Figura |
 |-----------------------|-------|-----------------------|-------|
-|6 Hz| ![6Hz]() | 8 Hz| ![8Hz]() | 
-|10 Hz| ![10Hz]() |12 Hz| ![12Hz]() |
-|14 Hz|![14Hz]()|16 Hz| ![16Hz]() |
-|18 Hz| ![18Hz]() |20 Hz|![20Hz]() | 
+|6 Hz| ![6Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/VR022/PromedioVx-065ms-6Hz.png?raw=true) | 8 Hz| ![8Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/VR022/PromedioVx-065ms-8Hz.png?raw=true) | 
+|10 Hz| ![10Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/VR022/PromedioVx-065ms-10Hz.png?raw=true) |12 Hz| ![12Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/VR022/PromedioVx-065ms-12Hz.png?raw=true) |
+|14 Hz|![14Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/VR022/PromedioVx-065ms-14Hz.png?raw=true)|16 Hz| ![16Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/VR022/PromedioVx-065ms-16Hz.png?raw=true) |
+|18 Hz| ![18Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/VR022/PromedioVx-065ms-18Hz.png?raw=true) |20 Hz|![20Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/VR022/PromedioVx-065ms-20Hz.png?raw=true) | 
 
 -Q
 
