@@ -20,9 +20,31 @@ $V_R=0,35$
 | Frecuencia de forzado | Video | Frecuencia de forzado | Video |
 |-----------------------|-------|-----------------------|-------|
 | 6Hz | <video src='https://user-images.githubusercontent.com/67233283/170842206-5443ca75-59c3-4311-a3c2-08991200deeb.mp4' width=90/> | 8 Hz| <video src='https://user-images.githubusercontent.com/67233283/170842209-e3cb5dcc-0292-4bb2-b304-939d81a5fd11.mp4' width=90/> | 
-|10 Hz| <video src='https://user-images.githubusercontent.com/67233283/170842215-f48efa95-a74b-4ae5-9c31-38537f78e4ba.mp4' width=90/> |12 Hz| <video src='' width=90/> |
-|14 Hz| <video src='' width=90/> |16 Hz| <video src='' width=90/> |
-|18 Hz| <video src='' width=90/> |20 Hz| <video src='' width=90/> |
+|10 Hz| <video src='https://user-images.githubusercontent.com/67233283/170842215-f48efa95-a74b-4ae5-9c31-38537f78e4ba.mp4' width=90/> |12 Hz| <video src='https://user-images.githubusercontent.com/67233283/170844312-6a3f21ff-ad51-43cc-9438-2a084c86ce75.mp4' width=90/> |
+|14 Hz| <video src='' width=90/> |16 Hz| <video src='https://user-images.githubusercontent.com/67233283/170844314-576db926-03ef-46db-a0b5-9b8fab1124a8.mp4' width=90/> |
+|18 Hz| <video src='https://user-images.githubusercontent.com/67233283/170844263-2b090880-c1ed-4b1b-85ae-7be8bef0f8ab.mp4' width=90/> |20 Hz| <video src='https://user-images.githubusercontent.com/67233283/170844265-96c12c03-8090-4f9c-ba0f-b9988335874f.mp4' width=90/> |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
