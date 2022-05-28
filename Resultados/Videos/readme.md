@@ -19,10 +19,22 @@ $V_R=0,28$
 $V_R=0,35$
 | Frecuencia de forzado | Video | Frecuencia de forzado | Video |
 |-----------------------|-------|-----------------------|-------|
-| 6Hz | <video src='' width=90/> | 8 Hz| <video src='' width=90/> | 
-|10 Hz| <video src='' width=90/> |12 Hz| <video src='' width=90/> |
+| 6Hz | <video src='https://user-images.githubusercontent.com/67233283/170842206-5443ca75-59c3-4311-a3c2-08991200deeb.mp4' width=90/> | 8 Hz| <video src='https://user-images.githubusercontent.com/67233283/170842209-e3cb5dcc-0292-4bb2-b304-939d81a5fd11.mp4' width=90/> | 
+|10 Hz| <video src='https://user-images.githubusercontent.com/67233283/170842215-f48efa95-a74b-4ae5-9c31-38537f78e4ba.mp4' width=90/> |12 Hz| <video src='' width=90/> |
 |14 Hz| <video src='' width=90/> |16 Hz| <video src='' width=90/> |
 |18 Hz| <video src='' width=90/> |20 Hz| <video src='' width=90/> |
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
