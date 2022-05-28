@@ -22,8 +22,7 @@ $V_R=0,35$
 | 6Hz | <video src='https://user-images.githubusercontent.com/67233283/170842206-5443ca75-59c3-4311-a3c2-08991200deeb.mp4' width=90/> | 8 Hz| <video src='https://user-images.githubusercontent.com/67233283/170842209-e3cb5dcc-0292-4bb2-b304-939d81a5fd11.mp4' width=90/> | 
 |10 Hz| <video src='https://user-images.githubusercontent.com/67233283/170842215-f48efa95-a74b-4ae5-9c31-38537f78e4ba.mp4' width=90/> |12 Hz| <video src='https://user-images.githubusercontent.com/67233283/170844255-934d226b-51da-4585-8823-ade9289ccb5b.mp4' width=90/> |
 |14 Hz| <video src='' width=90/> |16 Hz| <video src='https://user-images.githubusercontent.com/67233283/170844258-561bf8b1-380a-42c7-8a05-64f7d2c9e640.mp4' width=90/> |
-|18 Hz| <video src='https://user-images.githubusercontent.com/67233283/170844263-2b090880-c1ed-4b1b-85ae-7be8bef0f8ab.mp4
-' width=90/> |20 Hz| <video src='https://user-images.githubusercontent.com/67233283/170844265-96c12c03-8090-4f9c-ba0f-b9988335874f.mp4' width=90/> |
+|18 Hz| <video src='https://user-images.githubusercontent.com/67233283/170844263-2b090880-c1ed-4b1b-85ae-7be8bef0f8ab.mp4' width=90/> |20 Hz| <video src='https://user-images.githubusercontent.com/67233283/170844265-96c12c03-8090-4f9c-ba0f-b9988335874f.mp4' width=90/> |
 
 
 
