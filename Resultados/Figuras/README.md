@@ -2,16 +2,10 @@
 
 ## Globales
 
-(Estas se irán actualizando)
-
 ![d+vsf+](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/DesplazamientoVsFrecuencia.png?raw=true) 
 
 ![CDvsf+](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/CDVsFrecuencia.png?raw=true) 
 
-|Gráfico|Gráfico|
-|-|-|
-| ![vx-V](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/MediaVxVsX-083ms.png?raw=true) | ![vx-V-Max](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/MaxMediaVx-083ms.png?raw=true) |
-| ![stdDev](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/FluctuacionesVyVsX-083ms.png?raw=true) | ![stdDevMax](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/MaxFluctuacionesVy-083ms.png?raw=true) |
 
 ## Campos medios
 
@@ -82,7 +76,7 @@ $\|\underline{\mathbf{v}}\|$
 |6 Hz| ![6Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/VR035/PromediomagnitudV-102ms-6Hz.png?raw=true) |8 Hz| ![8Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/VR035/PromediomagnitudV-102ms-8Hz.png?raw=true) | 
 |10 Hz| ![10Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/VR035/PromediomagnitudV-102ms-10Hz.png?raw=true) |12 Hz| ![12Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/VR035/PromediomagnitudV-102ms-12Hz.png?raw=true) |
 |14 Hz|![14Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/VR035/PromediomagnitudV-102ms-14Hz.png?raw=true)| 16 Hz| ![16Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/VR035/PromediomagnitudV-102ms-16Hz.png?raw=true)|
-|18 Hz| ![18Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/VR035/PromediomagnitudV-102ms-18Hz.png?raw=true) | 20 Hz|![20Hz]()| 
+|18 Hz| ![18Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/VR035/PromediomagnitudV-102ms-18Hz.png?raw=true) | 20 Hz|![20Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/VR035/PromediomagnitudV-102ms-20Hz.png?raw=true)| 
 
 $\langle \mathrm{v}_1 \rangle$
 
@@ -91,7 +85,7 @@ $\langle \mathrm{v}_1 \rangle$
 |6 Hz| ![6Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/VR035/PromedioVx-102ms-6Hz.png?raw=true) | 8 Hz| ![8Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/VR035/PromedioVx-102ms-8Hz.png?raw=true) | 
 |10 Hz| ![10Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/VR035/PromedioVx-102ms-10Hz.png?raw=true) |12 Hz| ![12Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/VR035/PromedioVx-102ms-12Hz.png?raw=true) |
 |14 Hz|![14Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/VR035/PromedioVx-102ms-14Hz.png?raw=true)|16 Hz| ![16Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/VR035/PromedioVx-102ms-16Hz.png?raw=true) |
-|18 Hz| ![18Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/VR035/PromedioVx-102ms-18Hz.png?raw=true) |20 Hz|![20Hz]() | 
+|18 Hz| ![18Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/VR035/PromedioVx-102ms-18Hz.png?raw=true) |20 Hz|![20Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/VR035/PromedioVx-102ms-20Hz.png?raw=true) | 
 
 $Q$
 
@@ -99,7 +93,7 @@ $Q$
 |-----------------------|-------|-----------------------|-------|
 | 6 Hz| ![6Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/VR035/PromedioQ-102ms-6Hz.png?raw=true) |8 Hz| ![8Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/VR035/PromedioQ-102ms-8Hz.png?raw=true) |
 | 10 Hz| ![10Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/VR035/PromedioQ-102ms-10Hz.png?raw=true) |12 Hz| ![12Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/VR035/PromedioQ-102ms-12Hz.png?raw=true) |
-|14 Hz|![14Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/VR035/PromedioQ-102ms-14Hz.png?raw=true) |16 Hz| ![16Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/VR035/PromedioQ-102ms-16Hz.png?raw=true) |18 Hz| ![18Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/VR035/PromedioQ-102ms-18Hz.png?raw=true) |20 Hz|![20Hz]()| 
+|14 Hz|![14Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/VR035/PromedioQ-102ms-14Hz.png?raw=true) |16 Hz| ![16Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/VR035/PromedioQ-102ms-16Hz.png?raw=true) |18 Hz| ![18Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/VR035/PromedioQ-102ms-18Hz.png?raw=true) |20 Hz|![20Hz](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Campos%20medios/VR035/PromedioQ-102ms-20Hz.png?raw=true)| 
 
 ## Coeficientes de fuerza
 
