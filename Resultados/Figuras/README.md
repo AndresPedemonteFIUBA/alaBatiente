@@ -6,6 +6,17 @@
 
 ![CDvsf+](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/CDVsFrecuencia.png?raw=true) 
 
+![MaxMediaVx](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/MaxMediaVx.png?raw=true)
+
+![MaxStdDevVy](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/MaxFluctuacionesVy.png?raw=true)
+
+![ddmaxffmax](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/deltaDeltaMaxVsfrecFrecMax.png?raw=true)
+
+![dmaxVR](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/deltaMaxVsVR.png?raw=true)
+
+![Cydmax](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/CauchyVsDeltaMax.png?raw=true)
+
+![Cyfmax](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/CauchyVsFMax2.png?raw=true)
 
 ## Campos medios
 
