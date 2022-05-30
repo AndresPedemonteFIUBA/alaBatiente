@@ -2,16 +2,10 @@
 
 ## Globales
 
-(Estas se irán actualizando)
-
 ![d+vsf+](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/DesplazamientoVsFrecuencia.png?raw=true) 
 
 ![CDvsf+](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/CDVsFrecuencia.png?raw=true) 
 
-|Gráfico|Gráfico|
-|-|-|
-| ![vx-V](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/MediaVxVsX-083ms.png?raw=true) | ![vx-V-Max](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/MaxMediaVx-083ms.png?raw=true) |
-| ![stdDev](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/FluctuacionesVyVsX-083ms.png?raw=true) | ![stdDevMax](https://github.com/AndresPedemonteFIUBA/alaBatiente/blob/conBlockMesh/Resultados/Figuras/Globales/MaxFluctuacionesVy-083ms.png?raw=true) |
 
 ## Campos medios
 
