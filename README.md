@@ -19,18 +19,6 @@ Llevar la carpeta `custom-OF-BC` a, por ejemplo, `$FOAM_RUN`. En la carpeta, abr
 
 Para usar los 8 núcleos de la compu del labo: `mpirun --use-hwthread-cpus ...`
 
-## PostProcessing
-
-En la carpeta `fluid/system` ya están los archivos necesarios para correr:
-
-`pimpleFoam -postProcess -func forcesIncompressible [-time a:b]` (el último parámetro es opcional para calcular solo desde el instante `a` hasta el `b`)
-
-
-y
-`pimpleFoam -postProcess -func forceCoeffsIncompressible [-time a:b]` (coeficientes de fuerzas)
-
-Para juntar archivos `forceCoeffs_*.dat` usar `head -9 forceCoeffs.dat > forceCoefficients.dat && tail -n +10 -q forceCoeff*.dat >> forceCoefficients.dat`
-
 ## Distintas frecuencias de pitching
 
 Para ajustar la frecuencia hay que modificar en dos lugares:
