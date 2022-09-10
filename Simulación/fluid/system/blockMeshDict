@@ -9,10 +9,10 @@ FoamFile
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
 
-xInlet -0.05; // Posición en x del inlet.
-xOutlet 0.25; // Posición en x del outlet.
-yInf -0.06;  // Borde inferior del dominio.
-ySup 0.12; //Borde superior del dominio.
+xInlet -0.145; // Posición en x del inlet.
+xOutlet 0.6; // Posición en x del outlet.
+yInf -0.145;  // Borde inferior del dominio.
+ySup 0.205; //Borde superior del dominio.
 relacionRadios 4; // Relación de radios entre el radio de las esquinas de los bloques semicirculares que rodean a la varilla y el radio de la varilla.
 diametroVarilla 0.002; // Diámetro de la varilla.
 largoAla 0.035; //Largo del ala.
@@ -20,7 +20,6 @@ espesorAla 0.00005; //Espesor del ala
 
 //Grado de refinamiento deseado (0 a 2):
 n		2;
-// !!! No olvidar correr la utility extrudeMesh luego de blockMesh !!!
 
 // De acá en adelante, no toquetear.
 
@@ -111,7 +110,6 @@ vertices
 ($xOutlet $yInf 0)			//Vertex 26
 ($xOutlet $y27 0)			//Vertex 27
 ($xOutlet $y28 0)			//Vertex 28
-//($xOutlet $y29 0) 			//Vertex 29
 ($xOutlet $y30 0)			//Vertex 30
 ($xOutlet $ySup 0)			//Vertex 31
 ($xInlet $yInf 0.160)			//Vertex 32
@@ -143,7 +141,6 @@ vertices
 ($xOutlet $yInf 0.160)			//Vertex 58
 ($xOutlet $y27 0.160)			//Vertex 59
 ($xOutlet $y28 0.160)			//Vertex 60
-//($xOutlet $y29 0.160) 		//Vertex 61
 ($xOutlet $y30 0.160)			//Vertex 62
 ($xOutlet $ySup 0.160)			//Vertex 63
 (0.0663 $yInf 0)			//Vertex 64
@@ -160,14 +157,14 @@ vertices
 
 // Parametros de refinamiento de malla.
 
-N0x #calc "pow(2.0,$n)*10"; // Cantidad de celdas en la dirección x en el bloque 0.
-N0y #calc "pow(2.0,$n)*12"; // Cantidad de celdas en la dirección y en el bloque 0.
+N0x #calc "pow(2.0,$n)*12"; // Cantidad de celdas en la dirección x en el bloque 0.
+N0y #calc "pow(2.0,$n)*15"; // Cantidad de celdas en la dirección y en el bloque 0.
 
 // N1x = N0x // Cantidad de celdas en la dirección x en el bloque 1. Igual a N0x.
 N1y #calc "pow(2.0,$n)*3"; // Cantidad de celdas en la dirección y en el bloque 1.
 
 // N2x = N0x // Cantidad de celdas en la dirección x en el bloque 2. Igual a N0x.
-N2y #calc"pow(2.0,$n)*12"; // Cantidad de celdas en la dirección y en el bloque 2.
+N2y #calc"pow(2.0,$n)*15"; // Cantidad de celdas en la dirección y en el bloque 2.
 
 //N3y = N0y / Cantidad de celdas en la dirección y en el bloque 3. Igual a N0y.
 N3x #calc"pow(2.0,$n)*4"; // Cantidad de celdas en la dirección x en el bloque 3.
@@ -189,7 +186,7 @@ N8y #calc "pow(2.0,$n)*4";
 //N9y = N8y (para hacerlo simétrico).
 
 
-N10x #calc "pow(2.0,$n)*25"; // // Cantidad de celdas en la dirección x en el bloque 10. 
+N10x #calc "pow(2.0,$n)*30"; // // Cantidad de celdas en la dirección x en el bloque 10. 
 // Nr + N10x es la cantidad de celdas a lo largo de la longitud L del ala.
 // N10y = N3y
 
@@ -202,18 +199,19 @@ N10x #calc "pow(2.0,$n)*25"; // // Cantidad de celdas en la dirección x en el b
 // N13x = N10x (para hacerlo simétrico).
 // N13y = N2y
 
-Nxout #calc "pow(2.0,$n)*30"; // Esto es la cantidad de celdas en x de los bloques 14, 15, 16, 17 y 18.
+Nxout #calc "pow(2.0,$n)*50"; // Esto es la cantidad de celdas en x de los bloques 14, 15, 16, 17 y 18.
 NyWake 2; // Cantidad de celdas en y en el bloque 16.
-GxOutlet 15; // Gradiente de tamaño de celda en la dirección x después del ala hacia el outlet.
+GxOutlet 25; // Gradiente de tamaño de celda en la dirección x después del ala hacia el outlet.
 
 Gr 4; // Gradiente de tamaño de las celdas en la dirección radial para los bloques 4, 5, 6, 8 y 9.
 GrInv 0.25; // Reciproco de Gr.
 
-GxB0 0.25; // Gradiente de tamaño de las celdas en la dirección x para los bloques 0, 3, 10 y 14.
+GxB0 #calc "1.0/25"; // Gradiente de tamaño de las celdas en la dirección x para los bloques 0, 3, 10 y 14.
 GxB2 #calc "$GxB0"; //Igual a GxB0.
 
-GyB0 0.2; // Gradiente de tamaño de las celdas en la dirección y para los bloques 0, 3, 10 y 14.
-GyB2 5; //Reciproco de GyB0.
+
+GyB2 25; //Reciproco de GyB0.
+GyB0 #calc "1.0/$GyB2"; // Gradiente de tamaño de las celdas en la dirección y para los bloques 0, 3, 10 y 14.
 
 Gy8 0.5; //
 Gy9 2; // 
